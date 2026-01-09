@@ -1,9 +1,10 @@
 "use client";
 
+// TODO: Add section number
 export default function Lab1() {
   return (
     <div id="wd-lab1">
-      <h2>Lab 1</h2>
+      <h2>Lab 1 - Aaryan Jain Section _</h2>
       <h3>HTML Examples</h3>
       <div id="wd-h-tag">
         <h4>Heading Tags</h4>
@@ -322,7 +323,6 @@ export default function Lab1() {
       <a href="https://github.com/Aaryan1203/kambaz-next-js" id="wd-github">
         click here
       </a>
-
     </div>
   );
 }
