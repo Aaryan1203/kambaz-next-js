@@ -43,6 +43,7 @@ export default function AssignmentEditor() {
             <td>
               <select id="wd-display-grade-as">
                 <option>Percentage</option>
+                <option>Raw Score</option>
               </select>
             </td>
           </tr>
