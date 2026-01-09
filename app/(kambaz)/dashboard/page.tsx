@@ -26,7 +26,7 @@ export default function Dashboard() {
         <br />
 
         <div className="wd-dashboard-course">
-          <Link href="/courses/2222" className="wd-dashboard-course-link">
+          <Link href="/courses/2500" className="wd-dashboard-course-link">
             <Image
               src="/images/cs2500.jpg"
               width={200}
@@ -35,7 +35,9 @@ export default function Dashboard() {
             />
             <div>
               <h5> CS2500 </h5>
-              <p className="wd-dashboard-course-title">Fundementals of Computer Science</p>
+              <p className="wd-dashboard-course-title">
+                Fundementals of Computer Science
+              </p>
               <button> Go </button>
             </div>
           </Link>
@@ -43,7 +45,7 @@ export default function Dashboard() {
         <br />
 
         <div className="wd-dashboard-course">
-          <Link href="/courses/3333" className="wd-dashboard-course-link">
+          <Link href="/courses/1800" className="wd-dashboard-course-link">
             <Image
               src="/images/cs1800.jpg"
               width={200}
@@ -60,7 +62,7 @@ export default function Dashboard() {
         <br />
 
         <div className="wd-dashboard-course">
-          <Link href="/courses/4444" className="wd-dashboard-course-link">
+          <Link href="/courses/3000" className="wd-dashboard-course-link">
             <Image
               src="/images/cs3000.jpg"
               width={200}
@@ -69,7 +71,9 @@ export default function Dashboard() {
             />
             <div>
               <h5> CS 3000 </h5>
-              <p className="wd-dashboard-course-title">Object Oriented Design</p>
+              <p className="wd-dashboard-course-title">
+                Object Oriented Design
+              </p>
               <button> Go </button>
             </div>
           </Link>
@@ -77,7 +81,7 @@ export default function Dashboard() {
         <br />
 
         <div className="wd-dashboard-course">
-          <Link href="/courses/5555" className="wd-dashboard-course-link">
+          <Link href="/courses/3500" className="wd-dashboard-course-link">
             <Image
               src="/images/cs3500.jpg"
               width={200}
@@ -96,7 +100,7 @@ export default function Dashboard() {
         <br />
 
         <div className="wd-dashboard-course">
-          <Link href="/courses/6666" className="wd-dashboard-course-link">
+          <Link href="/courses/4530" className="wd-dashboard-course-link">
             <Image
               src="/images/cs4530.jpg"
               width={200}
@@ -114,18 +118,16 @@ export default function Dashboard() {
         </div>
         <br />
         <div className="wd-dashboard-course">
-          <Link href="/courses/7777" className="wd-dashboard-course-link">
+          <Link href="/courses/3800" className="wd-dashboard-course-link">
             <Image
-              src="/images/ds3000.jpg"
+              src="/images/cs3800.jpg"
               width={200}
               height={150}
               alt="course 7"
             />
             <div>
-              <h5> DS 3000 </h5>
-              <p className="wd-dashboard-course-title">
-                Foundations of Data Science
-              </p>
+              <h5> CS 3800 </h5>
+              <p className="wd-dashboard-course-title">Theory of Computation</p>
               <button> Go </button>
             </div>
           </Link>

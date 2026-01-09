@@ -26,7 +26,7 @@ export default function Lab1() {
           vertical spaces to make the text easier to read. Browsers ignore
           vertical white spaces and render all the text as one single set of
           sentences. To force the browser to add vertical spacing, wrap the
-          paragraphs you want to separate with the paragraph tag{" "}
+          paragraphs you want to separate with the paragraph tag
         </p>
         <p id="wd-p-2">
           This is the first paragraph. The paragraph tag is used to format
