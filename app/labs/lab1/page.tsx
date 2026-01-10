@@ -1,6 +1,5 @@
 "use client";
 
-// TODO: Add section number
 export default function Lab1() {
   return (
     <div id="wd-lab1">
