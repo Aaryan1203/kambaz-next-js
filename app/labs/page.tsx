@@ -24,6 +24,14 @@ export default function labs() {
             Kambaz
           </Link>
         </li>
+        <li>
+          <Link
+            href="https://github.com/Aaryan1203/kambaz-next-js"
+            id="wd-github"
+          >
+            Github
+          </Link>
+        </li>
       </ul>
     </div>
   );
