@@ -1,8 +1,8 @@
 import { ListGroup, ListGroupItem } from "react-bootstrap";
-import ModulesControls from "./moduleControls";
+import ModulesControls from "./ModuleControls";
 import { BsGripVertical } from "react-icons/bs";
 import ModuleControlButtons from "./ModuleControlButtons";
-import LessonControlButtons from "./LessonControlButtons";
+import LessonControlButtons from "../../../components/LessonControlButtons";
 
 export default function Modules() {
   return (
@@ -20,14 +20,17 @@ export default function Modules() {
             <ListGroupItem className="wd-lesson p-3 ps-1">
               <BsGripVertical className="me-2 fs-3" />
               LEARNING OBJECTIVES
+              <LessonControlButtons />
             </ListGroupItem>
             <ListGroupItem className="wd-lesson p-3 ps-1">
               <BsGripVertical className="me-2 fs-3" />
               Introduction to the course
+              <LessonControlButtons />
             </ListGroupItem>
             <ListGroupItem className="wd-lesson p-3 ps-1">
               <BsGripVertical className="me-2 fs-3" />
               What is Web Development?
+              <LessonControlButtons />
             </ListGroupItem>
           </ListGroup>
         </ListGroupItem>

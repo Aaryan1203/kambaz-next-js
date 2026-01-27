@@ -1,49 +1,94 @@
 import Link from "next/link";
+import { ListGroup, ListGroupItem } from "react-bootstrap";
+import ModulesControls from "./ModuleControls";
+import { BsGripVertical } from "react-icons/bs";
+import ModuleControlButtons from "./ModuleControlButtons";
+import LessonControlButtons from "../../../components/LessonControlButtons";
+import AssignmentControls from "./AssignmentControls";
+import AssignmentsControlButtons from "./AssignmentControlsButton";
+import { MdAssignment } from "react-icons/md";
+import { FaCaretDown } from "react-icons/fa";
 
 export default function Assignments() {
   return (
     <div id="wd-assignments">
-      <input placeholder="Search for Assignments" id="wd-search-assignment" />
-      <button id="wd-add-assignment-group">+ Group</button>
-      <button id="wd-add-assignment">+ Assignment</button>
-      <h3 id="wd-assignments-title">
-        ASSIGNMENTS 40% of Total <button>+</button>
-      </h3>
-      <ul id="wd-assignment-list">
-        <li className="wd-assignment-list-item">
-          <Link
-            href="/courses/1234/assignments/123"
-            className="wd-assignment-link"
-          >
-            A1 - ENV + HTML
-          </Link>
-          <br />
-          Multiple Modules | <strong>Not available until</strong> May 6th at
-          12:00am | <strong>Due</strong> May 13th at 11:59pm | 100pts
-        </li>
-        <li className="wd-assignment-list-item">
-          <Link
-            href="/courses/1234/assignments/123"
-            className="wd-assignment-link"
-          >
-            A2 - CSS + BOOTSTRAP
-          </Link>
-          <br />
-          Multiple Modules | <strong>Not available until</strong> May 13th at
-          12:00am | <strong>Due</strong> May 20th at 11:59pm | 100pts
-        </li>
-        <li className="wd-assignment-list-item">
-          <Link
-            href="/courses/1234/assignments/123"
-            className="wd-assignment-link"
-          >
-            A2 - JAVASCRIPT + REACT
-          </Link>
-          <br />
-          Multiple Modules | <strong>Not available until</strong> May 20th at
-          12:00am | <strong>Due</strong> May 27th at 11:59pm | 100pts
-        </li>
-      </ul>
+      <AssignmentControls />
+      <br />
+      <br />
+      <ListGroup className="rounded-0" id="wd-assignments">
+        <ListGroupItem className="wd-assignments-title p-0 fs-5 border-gray">
+          <div className="wd-title p-3 ps-2 bg-secondary d-flex align-items-center justify-content-between">
+            <div className="d-flex align-items-center gap-2">
+              <BsGripVertical className="fs-3" />
+              <FaCaretDown />
+              ASSIGNMENTS
+            </div>
+            <div className="d-flex align-items-center gap-2">
+              <span className="badge rounded-pill border border-dark text-dark bg-transparent px-3 py-2">
+                40% of Total
+              </span>
+              <AssignmentsControlButtons />
+            </div>
+          </div>
+        </ListGroupItem>
+        <ListGroupItem className="p-3 wd-assignment">
+          <div className="d-flex justify-content-between align-items-center">
+            <div className="d-flex align-items-center">
+              <BsGripVertical className="me-2 fs-3" />
+              <MdAssignment className="me-4 fs-3 text-success" />
+              <div className="d-flex flex-column">
+                <span>
+                  <strong>A1</strong>
+                </span>
+                <span>
+                  <span className="text-danger">Multiple Modules</span> |{" "}
+                  <strong>Not available until</strong> May 6th at 12:00am |{" "}
+                  <strong>Due</strong> May 13th at 11:59pm | 100pts
+                </span>
+              </div>
+            </div>
+            <LessonControlButtons />
+          </div>
+        </ListGroupItem>
+        <ListGroupItem className="p-3 wd-assignment">
+          <div className="d-flex justify-content-between align-items-center">
+            <div className="d-flex align-items-center">
+              <BsGripVertical className="me-2 fs-3" />
+              <MdAssignment className="me-4 fs-3 text-success" />
+              <div className="d-flex flex-column">
+                <span>
+                  <strong>A2</strong>
+                </span>
+                <span>
+                  <span className="text-danger">Multiple Modules</span> |{" "}
+                  <strong>Not available until</strong> May 13th at 12:00am |{" "}
+                  <strong>Due</strong> May 20th at 11:59pm | 100pts
+                </span>
+              </div>
+            </div>
+            <LessonControlButtons />
+          </div>
+        </ListGroupItem>
+        <ListGroupItem className="p-3 wd-assignment">
+          <div className="d-flex justify-content-between align-items-center">
+            <div className="d-flex align-items-center">
+              <BsGripVertical className="me-2 fs-3" />
+              <MdAssignment className="me-4 fs-3 text-success" />
+              <div className="d-flex flex-column">
+                <span>
+                  <strong>A3</strong>
+                </span>
+                <span>
+                  <span className="text-danger">Multiple Modules</span> |{" "}
+                  <strong>Not available until</strong> May 20th at 12:00am |{" "}
+                  <strong>Due</strong> May 27th at 11:59pm | 100pts
+                </span>
+              </div>
+            </div>
+            <LessonControlButtons />
+          </div>
+        </ListGroupItem>
+      </ListGroup>
     </div>
   );
 }

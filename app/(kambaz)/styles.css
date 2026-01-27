@@ -31,6 +31,6 @@ body * {
 .list-group-item {
   --bs-list-group-border-color: gray;
 }
-.wd-lesson {
+.wd-lesson, .wd-assignment {
   border-left: 3px solid green !important;
 }

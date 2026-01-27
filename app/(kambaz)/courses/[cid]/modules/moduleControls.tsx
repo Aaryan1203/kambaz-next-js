@@ -6,18 +6,33 @@ import {
   DropdownToggle,
 } from "react-bootstrap";
 import { FaPlus } from "react-icons/fa6";
-import GreenCheckmark from "./GreenCheckmark";
+import GreenCheckmark from "../../../components/GreenCheckmark";
 export default function ModulesControls() {
   return (
-    <div id="wd-modules-controls" className="d-flex align-items-center justify-content-end gap-2">
-      <Button className="btn btn-secondary rounded-0" size="lg" id="wd-collapse-all">
+    <div
+      id="wd-modules-controls"
+      className="d-flex align-items-center justify-content-end gap-2"
+    >
+      <Button
+        className="btn btn-secondary rounded-0"
+        size="lg"
+        id="wd-collapse-all"
+      >
         Collapse All
       </Button>
-      <Button className="btn btn-secondary rounded-0" size="lg" id="wd-view-progress">
+      <Button
+        className="btn btn-secondary rounded-0"
+        size="lg"
+        id="wd-view-progress"
+      >
         View Progress
       </Button>
       <Dropdown>
-        <DropdownToggle className="btn btn-secondary rounded-0" size="lg" id="wd-publish-all-btn">
+        <DropdownToggle
+          className="btn btn-secondary rounded-0"
+          size="lg"
+          id="wd-publish-all-btn"
+        >
           <GreenCheckmark /> Publish All
         </DropdownToggle>
         <DropdownMenu>
@@ -38,7 +53,11 @@ export default function ModulesControls() {
           </DropdownItem>
         </DropdownMenu>
       </Dropdown>
-      <Button className="btn btn-danger rounded-0" size="lg" id="wd-add-module-btn">
+      <Button
+        className="btn btn-danger rounded-0"
+        size="lg"
+        id="wd-add-module-btn"
+      >
         <FaPlus className="position-relative me-2" style={{ bottom: "1px" }} />
         Module
       </Button>
