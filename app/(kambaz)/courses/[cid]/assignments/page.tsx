@@ -1,8 +1,6 @@
 import Link from "next/link";
 import { ListGroup, ListGroupItem } from "react-bootstrap";
-import ModulesControls from "./ModuleControls";
 import { BsGripVertical } from "react-icons/bs";
-import ModuleControlButtons from "./ModuleControlButtons";
 import LessonControlButtons from "../../../components/LessonControlButtons";
 import AssignmentControls from "./AssignmentControls";
 import AssignmentsControlButtons from "./AssignmentControlsButton";
@@ -36,16 +34,19 @@ export default function Assignments() {
             <div className="d-flex align-items-center">
               <BsGripVertical className="me-2 fs-3" />
               <MdAssignment className="me-4 fs-3 text-success" />
-              <div className="d-flex flex-column">
-                <span>
+              <Link
+                href="/courses/1234/assignments/123"
+                className="text-decoration-none text-black"
+              >
+                <div className="d-flex flex-column">
                   <strong>A1</strong>
-                </span>
-                <span>
-                  <span className="text-danger">Multiple Modules</span> |{" "}
-                  <strong>Not available until</strong> May 6th at 12:00am |{" "}
-                  <strong>Due</strong> May 13th at 11:59pm | 100pts
-                </span>
-              </div>
+                  <span>
+                    <span className="text-danger">Multiple Modules</span> |{" "}
+                    <strong>Not available until</strong> May 6th at 12:00am |{" "}
+                    <strong>Due</strong> May 13th at 11:59pm | 100pts
+                  </span>
+                </div>
+              </Link>
             </div>
             <LessonControlButtons />
           </div>
@@ -55,16 +56,21 @@ export default function Assignments() {
             <div className="d-flex align-items-center">
               <BsGripVertical className="me-2 fs-3" />
               <MdAssignment className="me-4 fs-3 text-success" />
-              <div className="d-flex flex-column">
-                <span>
-                  <strong>A2</strong>
-                </span>
-                <span>
-                  <span className="text-danger">Multiple Modules</span> |{" "}
-                  <strong>Not available until</strong> May 13th at 12:00am |{" "}
-                  <strong>Due</strong> May 20th at 11:59pm | 100pts
-                </span>
-              </div>
+              <Link
+                href="/courses/1234/assignments/123"
+                className="text-decoration-none text-black"
+              >
+                <div className="d-flex flex-column">
+                  <span>
+                    <strong>A2</strong>
+                  </span>
+                  <span>
+                    <span className="text-danger">Multiple Modules</span> |{" "}
+                    <strong>Not available until</strong> May 13th at 12:00am |{" "}
+                    <strong>Due</strong> May 20th at 11:59pm | 100pts
+                  </span>
+                </div>
+              </Link>
             </div>
             <LessonControlButtons />
           </div>
@@ -74,16 +80,21 @@ export default function Assignments() {
             <div className="d-flex align-items-center">
               <BsGripVertical className="me-2 fs-3" />
               <MdAssignment className="me-4 fs-3 text-success" />
-              <div className="d-flex flex-column">
-                <span>
-                  <strong>A3</strong>
-                </span>
-                <span>
-                  <span className="text-danger">Multiple Modules</span> |{" "}
-                  <strong>Not available until</strong> May 20th at 12:00am |{" "}
-                  <strong>Due</strong> May 27th at 11:59pm | 100pts
-                </span>
-              </div>
+              <Link
+                href="/courses/1234/assignments/123"
+                className="text-decoration-none text-black"
+              >
+                <div className="d-flex flex-column">
+                  <span>
+                    <strong>A3</strong>
+                  </span>
+                  <span>
+                    <span className="text-danger">Multiple Modules</span> |{" "}
+                    <strong>Not available until</strong> May 20th at 12:00am |{" "}
+                    <strong>Due</strong> May 27th at 11:59pm | 100pts
+                  </span>
+                </div>
+              </Link>
             </div>
             <LessonControlButtons />
           </div>
