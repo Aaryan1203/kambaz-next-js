@@ -30,7 +30,7 @@ export default function AssignmentControls() {
       </div>
       <div className="d-flex gap-2">
         <Button
-          className="btn btn-secondary rounded-0"
+          className="btn btn-secondary rounded-1"
           size="lg"
           id="wd-collapse-all"
         >
@@ -41,7 +41,7 @@ export default function AssignmentControls() {
           Group
         </Button>
         <Button
-          className="btn btn-danger rounded-0"
+          className="btn btn-danger rounded-1"
           size="lg"
           id="wd-add-module-btn"
         >

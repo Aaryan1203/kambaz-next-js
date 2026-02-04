@@ -14,14 +14,14 @@ export default function ModulesControls() {
       className="d-flex align-items-center justify-content-end gap-2"
     >
       <Button
-        className="btn btn-secondary rounded-0"
+        className="btn btn-secondary rounded-1"
         size="lg"
         id="wd-collapse-all"
       >
         Collapse All
       </Button>
       <Button
-        className="btn btn-secondary rounded-0"
+        className="btn btn-secondary rounded-1"
         size="lg"
         id="wd-view-progress"
       >
@@ -29,7 +29,7 @@ export default function ModulesControls() {
       </Button>
       <Dropdown>
         <DropdownToggle
-          className="btn btn-secondary rounded-0"
+          className="btn btn-secondary rounded-1"
           size="lg"
           id="wd-publish-all-btn"
         >
@@ -54,7 +54,7 @@ export default function ModulesControls() {
         </DropdownMenu>
       </Dropdown>
       <Button
-        className="btn btn-danger rounded-0"
+        className="btn btn-danger rounded-1"
         size="lg"
         id="wd-add-module-btn"
       >
