@@ -13,7 +13,7 @@ export default function Breadcrumb({
 
   return (
     <span>
-      Course {course?.name} &gt; {capitalizedCrumb}
+      {course?.name} &gt; {capitalizedCrumb}
     </span>
   );
 }
