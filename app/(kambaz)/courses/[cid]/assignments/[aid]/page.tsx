@@ -38,7 +38,6 @@ export default function AssignmentEditor() {
               />
             </td>
           </tr>
-          <br />
           <tr>
             <td className="pe-3 text-end align-top text-nowrap">
               <label htmlFor="wd-group" className="col-form-label">
@@ -54,7 +53,6 @@ export default function AssignmentEditor() {
               </select>
             </td>
           </tr>
-          <br />
           <tr>
             <td className="pe-3 text-end align-top text-nowrap">
               <label htmlFor="wd-display-grade-as" className="col-form-label">
@@ -71,7 +69,6 @@ export default function AssignmentEditor() {
               </select>
             </td>
           </tr>
-          <br />
           <tr>
             <td className="pe-3 text-end align-top text-nowrap">
               <label htmlFor="wd-submission-type" className="col-form-label">
@@ -88,7 +85,7 @@ export default function AssignmentEditor() {
               </select>
               <br />
               <br />
-              <td className="d-flex flex-column">
+              <div className="d-flex flex-column">
                 <label htmlFor="wd-text-entry">
                   <strong>Online Entry Options</strong>
                 </label>
@@ -138,10 +135,9 @@ export default function AssignmentEditor() {
                   />
                   <label htmlFor="wd-file-upload">File Uploads</label>
                 </div>
-              </td>
+              </div>
             </td>
           </tr>
-          <br />
           <tr>
             <td className="pe-3 text-end align-top text-nowrap">
               <label htmlFor="wd-assign-to" className="col-form-label">
@@ -153,11 +149,12 @@ export default function AssignmentEditor() {
                 <strong>Assign To</strong>
               </label>
               <div className="d-flex flex-column">
-                <input
+                <select
                   id="wd-assign-to"
-                  className="p-2 border mb-2"
-                  defaultValue={"Everyone"}
-                />
+                  className="p-2 border rounded-md w-100"
+                >
+                  <option>Everyone</option>
+                </select>
                 <label htmlFor="wd-due-date">
                   <strong>Due</strong>
                 </label>
