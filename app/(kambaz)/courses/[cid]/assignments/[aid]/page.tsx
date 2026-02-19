@@ -1,24 +1,32 @@
+"use client";
+
+import { useParams } from "next/navigation";
 import { Button } from "react-bootstrap";
+import * as db from "../../../../database";
+import Link from "next/link";
 
 export default function AssignmentEditor() {
+  const { aid, cid } = useParams();
+  const allAssignments = db.assignments;
+  const assignment = allAssignments.find(
+    (assignment) => assignment._id === aid,
+  );
+
   return (
     <div id="wd-assignments-editor">
       <div className="d-flex flex-column gap-2">
         <label htmlFor="wd-name">Assignment Name</label>
-        <input id="wd-name" className="p-2 border" defaultValue="A1" />
+        <input
+          id="wd-name"
+          className="p-2 border"
+          defaultValue={assignment?.title}
+        />
       </div>
       <br />
       <textarea
         id="wd-description"
         className="p-2 border"
-        defaultValue={
-          "The assignment is available online. \n\nSubmit a link to the landing page of your Web application running on Netlify. \n\nThe landing page should include the following: \n" +
-          "\t• Your full name and section\n" +
-          "\t• Links to each of the lab assignments\n" +
-          "\t• Link to the Kanbas application\n" +
-          "\t• Links to all relevant source code repositories\n" +
-          "\nThe Kanbas application should include a link to navigate back to the landing page"
-        }
+        defaultValue={assignment?.description}
       />
       <br />
       <br />
@@ -34,11 +42,10 @@ export default function AssignmentEditor() {
               <input
                 id="wd-points"
                 className="form-control w-100"
-                defaultValue={100}
+                defaultValue={assignment?.points}
               />
             </td>
           </tr>
-          <br />
           <tr>
             <td className="pe-3 text-end align-top text-nowrap">
               <label htmlFor="wd-group" className="col-form-label">
@@ -54,7 +61,6 @@ export default function AssignmentEditor() {
               </select>
             </td>
           </tr>
-          <br />
           <tr>
             <td className="pe-3 text-end align-top text-nowrap">
               <label htmlFor="wd-display-grade-as" className="col-form-label">
@@ -71,7 +77,6 @@ export default function AssignmentEditor() {
               </select>
             </td>
           </tr>
-          <br />
           <tr>
             <td className="pe-3 text-end align-top text-nowrap">
               <label htmlFor="wd-submission-type" className="col-form-label">
@@ -88,60 +93,39 @@ export default function AssignmentEditor() {
               </select>
               <br />
               <br />
-              <td className="d-flex flex-column">
+              <div className="d-flex flex-column">
                 <label htmlFor="wd-text-entry">
                   <strong>Online Entry Options</strong>
                 </label>
                 <div className="d-flex gap-2 align-items-center">
-                  <input
-                    type="checkbox"
-                    name="check-text-entry"
-                    id="wd-text-entry"
-                  />
+                  <input type="checkbox" id="wd-text-entry" />
                   <label htmlFor="wd-text-entry">Text Entry</label>
                 </div>
                 <br />
                 <div className="d-flex gap-2 align-items-center">
-                  <input
-                    type="checkbox"
-                    name="check-website-url"
-                    id="wd-website-url"
-                  />
+                  <input type="checkbox" id="wd-website-url" />
                   <label htmlFor="wd-website-url">Website URL</label>
                 </div>
                 <br />
                 <div className="d-flex gap-2 align-items-center">
-                  <input
-                    type="checkbox"
-                    name="check-media-recordings"
-                    id="wd-media-recordings"
-                  />
+                  <input type="checkbox" id="wd-media-recordings" />
                   <label htmlFor="wd-media-recordings">Media Recordings</label>
                 </div>
                 <br />
                 <div className="d-flex gap-2 align-items-center">
-                  <input
-                    type="checkbox"
-                    name="check-student-annotation"
-                    id="wd-student-annotation"
-                  />
+                  <input type="checkbox" id="wd-student-annotation" />
                   <label htmlFor="wd-student-annotation">
                     Student Annotation
                   </label>
                 </div>
                 <br />
                 <div className="d-flex gap-2 align-items-center">
-                  <input
-                    type="checkbox"
-                    name="check-file-upload"
-                    id="wd-file-upload"
-                  />
+                  <input type="checkbox" id="wd-file-upload" />
                   <label htmlFor="wd-file-upload">File Uploads</label>
                 </div>
-              </td>
+              </div>
             </td>
           </tr>
-          <br />
           <tr>
             <td className="pe-3 text-end align-top text-nowrap">
               <label htmlFor="wd-assign-to" className="col-form-label">
@@ -165,7 +149,7 @@ export default function AssignmentEditor() {
                   type="date"
                   id="wd-due-date"
                   className="p-2 border mb-2"
-                  defaultValue="2024-05-13"
+                  defaultValue={assignment?.dueDate?.slice(0, 10)}
                 />
                 <div className="d-flex gap-2">
                   <div className="d-flex flex-column">
@@ -175,7 +159,7 @@ export default function AssignmentEditor() {
                     <input
                       type="date"
                       id="wd-available-from"
-                      defaultValue="2024-05-06"
+                      defaultValue={assignment?.availableDate?.slice(0, 10)}
                       className="p-2 border mb-2"
                     />
                   </div>
@@ -186,7 +170,6 @@ export default function AssignmentEditor() {
                     <input
                       type="date"
                       id="wd-available-until"
-                      defaultValue="2024-05-20"
                       className="p-2 border mb-2"
                     />
                   </div>
@@ -198,12 +181,18 @@ export default function AssignmentEditor() {
       </table>
       <hr />
       <div className="d-flex justify-content-end gap-2">
-        <Button className="btn btn-secondary rounded-0" id="wd-collapse-all">
+        <Link
+          href={`/courses/${cid}/assignments`}
+          className="btn btn-secondary rounded-0"
+        >
           Cancel
-        </Button>
-        <Button className="btn btn-danger rounded-0" id="wd-collapse-all">
+        </Link>
+        <Link
+          href={`/courses/${cid}/assignments`}
+          className="btn btn-danger rounded-0"
+        >
           Save
-        </Button>
+        </Link>
       </div>
     </div>
   );

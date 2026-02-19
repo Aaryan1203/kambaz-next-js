@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import { ListGroup, ListGroupItem } from "react-bootstrap";
 import { BsGripVertical } from "react-icons/bs";
@@ -6,8 +8,23 @@ import AssignmentControls from "./AssignmentControls";
 import AssignmentsControlButtons from "./AssignmentControlsButton";
 import { MdAssignment } from "react-icons/md";
 import { FaCaretDown } from "react-icons/fa";
+import { useParams } from "next/navigation";
+import * as db from "../../../database";
+
+const formatDate = (date: string) => {
+  const dateObject = new Date(date);
+  return dateObject.toLocaleString("en-US", {
+    month: "short",
+    day: "numeric",
+    hour: "numeric",
+    minute: "2-digit",
+  });
+};
 
 export default function Assignments() {
+  const { cid } = useParams();
+  const assignments = db.assignments;
+
   return (
     <div id="wd-assignments">
       <AssignmentControls />
@@ -29,76 +46,39 @@ export default function Assignments() {
             </div>
           </div>
         </ListGroupItem>
-        <ListGroupItem className="p-3 wd-assignment">
-          <div className="d-flex justify-content-between align-items-center">
-            <div className="d-flex align-items-center">
-              <BsGripVertical className="me-2 fs-3" />
-              <MdAssignment className="me-4 fs-3 text-success" />
-              <Link
-                href="/courses/1234/assignments/123"
-                className="text-decoration-none text-black"
+        {assignments
+          .filter((assignment) => assignment.course === cid)
+          .map((assignment) => {
+            return (
+              <ListGroupItem
+                className={"p-3 wd-assignment"}
+                key={`assignment-${assignment._id}`}
               >
-                <div className="d-flex flex-column">
-                  <strong>A1</strong>
-                  <span>
-                    <span className="text-danger">Multiple Modules</span> |{" "}
-                    <strong>Not available until</strong> May 6th at 12:00am |{" "}
-                    <strong>Due</strong> May 13th at 11:59pm | 100pts
-                  </span>
+                <div className="d-flex justify-content-between align-items-center">
+                  <div className="d-flex align-items-center">
+                    <BsGripVertical className="me-2 fs-3" />
+                    <MdAssignment className="me-4 fs-3 text-success" />
+                    <Link
+                      href={`/courses/${cid}/assignments/${assignment._id}`}
+                      className="text-decoration-none text-black"
+                    >
+                      <div className="d-flex flex-column">
+                        <strong>{assignment.title}</strong>
+                        <span>
+                          <span className="text-danger">Multiple Modules</span>{" "}
+                          | <strong>Not available until</strong>{" "}
+                          {formatDate(assignment.availableDate)} |{" "}
+                          <strong>Due</strong> {formatDate(assignment.dueDate)}{" "}
+                          | 100pts
+                        </span>
+                      </div>
+                    </Link>
+                  </div>
+                  <LessonControlButtons />
                 </div>
-              </Link>
-            </div>
-            <LessonControlButtons />
-          </div>
-        </ListGroupItem>
-        <ListGroupItem className="p-3 wd-assignment">
-          <div className="d-flex justify-content-between align-items-center">
-            <div className="d-flex align-items-center">
-              <BsGripVertical className="me-2 fs-3" />
-              <MdAssignment className="me-4 fs-3 text-success" />
-              <Link
-                href="/courses/1234/assignments/123"
-                className="text-decoration-none text-black"
-              >
-                <div className="d-flex flex-column">
-                  <span>
-                    <strong>A2</strong>
-                  </span>
-                  <span>
-                    <span className="text-danger">Multiple Modules</span> |{" "}
-                    <strong>Not available until</strong> May 13th at 12:00am |{" "}
-                    <strong>Due</strong> May 20th at 11:59pm | 100pts
-                  </span>
-                </div>
-              </Link>
-            </div>
-            <LessonControlButtons />
-          </div>
-        </ListGroupItem>
-        <ListGroupItem className="p-3 wd-assignment">
-          <div className="d-flex justify-content-between align-items-center">
-            <div className="d-flex align-items-center">
-              <BsGripVertical className="me-2 fs-3" />
-              <MdAssignment className="me-4 fs-3 text-success" />
-              <Link
-                href="/courses/1234/assignments/123"
-                className="text-decoration-none text-black"
-              >
-                <div className="d-flex flex-column">
-                  <span>
-                    <strong>A3</strong>
-                  </span>
-                  <span>
-                    <span className="text-danger">Multiple Modules</span> |{" "}
-                    <strong>Not available until</strong> May 20th at 12:00am |{" "}
-                    <strong>Due</strong> May 27th at 11:59pm | 100pts
-                  </span>
-                </div>
-              </Link>
-            </div>
-            <LessonControlButtons />
-          </div>
-        </ListGroupItem>
+              </ListGroupItem>
+            );
+          })}
       </ListGroup>
     </div>
   );

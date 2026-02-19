@@ -1,0 +1,79 @@
+[
+  {
+    "_id": "CS1234",
+    "name": "React JS",
+    "number": "CS1234",
+    "startDate": "2023-01-10",
+    "endDate": "2023-05-15",
+    "department": "Computer Science",
+    "credits": 4,
+    "image": "/images/reactjs.jpg",
+    "description": "Full Stack software development using React and modern web technologies."
+  },
+  {
+    "_id": "CS2500",
+    "name": "Fundamentals of Computer Science",
+    "number": "CS2500",
+    "startDate": "2023-01-10",
+    "endDate": "2023-05-15",
+    "department": "Computer Science",
+    "credits": 4,
+    "image": "/images/cs2500.jpg",
+    "description": "An introduction to computer science covering problem solving, algorithms, and basic programming concepts."
+  },
+  {
+    "_id": "CS1800",
+    "name": "Discrete Structures",
+    "number": "CS1800",
+    "startDate": "2023-01-10",
+    "endDate": "2023-05-15",
+    "department": "Computer Science",
+    "credits": 4,
+    "image": "/images/cs1800.jpg",
+    "description": "Mathematical foundations of computer science including logic, sets, proofs, and combinatorics."
+  },
+  {
+    "_id": "CS3000",
+    "name": "Object Oriented Design",
+    "number": "CS3000",
+    "startDate": "2023-01-10",
+    "endDate": "2023-05-15",
+    "department": "Computer Science",
+    "credits": 4,
+    "image": "/images/cs3000.jpg",
+    "description": "Principles of object-oriented programming and software design, primarily using Java."
+  },
+  {
+    "_id": "CS3500",
+    "name": "Algorithms and Data Structures",
+    "number": "CS3500",
+    "startDate": "2023-01-10",
+    "endDate": "2023-05-15",
+    "department": "Computer Science",
+    "credits": 4,
+    "image": "/images/cs3500.jpg",
+    "description": "Design and analysis of algorithms with an emphasis on data structures and problem-solving techniques."
+  },
+  {
+    "_id": "CS4530",
+    "name": "Fundamentals of Software Engineering",
+    "number": "CS4530",
+    "startDate": "2023-01-10",
+    "endDate": "2023-05-15",
+    "department": "Computer Science",
+    "credits": 4,
+    "image": "/images/cs4530.jpg",
+    "description": "Practical software engineering concepts including design, testing, teamwork, and real-world development practices."
+  },
+  {
+    "_id": "CS3800",
+    "name": "Theory of Computation",
+    "number": "CS3800",
+    "startDate": "2023-01-10",
+    "endDate": "2023-05-15",
+    "department": "Computer Science",
+    "credits": 4,
+    "image": "/images/cs3800.jpg",
+    "description": "Study of computational models, formal languages, automata, and the limits of computation."
+  }
+]

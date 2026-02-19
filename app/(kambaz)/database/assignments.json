@@ -1,0 +1,197 @@
+[
+  {
+    "_id": "A123401",
+    "title": "React Components Assignment",
+    "course": "CS1234",
+    "description": "Build and compose reusable React components using JSX. Focus on props, component structure, and basic styling.",
+    "points": 75,
+    "availableDate": "2026-02-06T00:00:00-05:00",
+    "dueDate": "2026-02-13T23:59:00-05:00"
+  },
+  {
+    "_id": "A123402",
+    "title": "Hooks and State Exercise",
+    "course": "CS1234",
+    "description": "Practice using React hooks such as useState and useEffect to manage state and side effects in functional components.",
+    "points": 75,
+    "availableDate": "2026-02-14T00:00:00-05:00",
+    "dueDate": "2026-02-21T23:59:00-05:00"
+  },
+  {
+    "_id": "A123403",
+    "title": "Full Stack React Project",
+    "course": "CS1234",
+    "description": "Develop a full-stack React application that integrates a frontend UI with a backend API and persistent data storage.",
+    "points": 100,
+    "availableDate": "2026-02-22T00:00:00-05:00",
+    "dueDate": "2026-03-01T23:59:00-05:00"
+  },
+
+  {
+    "_id": "A250001",
+    "title": "Problem Solving Worksheet",
+    "course": "CS2500",
+    "description": "Solve a set of logic and algorithmic problems to strengthen structured problem-solving techniques.",
+    "points": 50,
+    "availableDate": "2026-02-06T00:00:00-05:00",
+    "dueDate": "2026-02-13T23:59:00-05:00"
+  },
+  {
+    "_id": "A250002",
+    "title": "Functions and Recursion Lab",
+    "course": "CS2500",
+    "description": "Implement recursive functions and analyze their behavior, efficiency, and base cases.",
+    "points": 75,
+    "availableDate": "2026-02-14T00:00:00-05:00",
+    "dueDate": "2026-02-21T23:59:00-05:00"
+  },
+  {
+    "_id": "A250003",
+    "title": "Data Structures Practice",
+    "course": "CS2500",
+    "description": "Practice working with fundamental data structures such as lists, trees, and maps through guided exercises.",
+    "points": 75,
+    "availableDate": "2026-02-22T00:00:00-05:00",
+    "dueDate": "2026-03-01T23:59:00-05:00"
+  },
+
+  {
+    "_id": "A180001",
+    "title": "Logic and Proofs Homework",
+    "course": "CS1800",
+    "description": "Complete exercises involving propositional logic, predicates, and formal proofs.",
+    "points": 50,
+    "availableDate": "2026-02-06T00:00:00-05:00",
+    "dueDate": "2026-02-13T23:59:00-05:00"
+  },
+  {
+    "_id": "A180002",
+    "title": "Sets and Relations Assignment",
+    "course": "CS1800",
+    "description": "Work with sets, relations, and functions, including proofs of properties such as transitivity and equivalence.",
+    "points": 75,
+    "availableDate": "2026-02-14T00:00:00-05:00",
+    "dueDate": "2026-02-21T23:59:00-05:00"
+  },
+  {
+    "_id": "A180003",
+    "title": "Graph Theory Problems",
+    "course": "CS1800",
+    "description": "Solve graph theory problems involving paths, cycles, connectivity, and graph properties.",
+    "points": 75,
+    "availableDate": "2026-02-22T00:00:00-05:00",
+    "dueDate": "2026-03-01T23:59:00-05:00"
+  },
+
+  {
+    "_id": "A300001",
+    "title": "OOP Fundamentals Lab",
+    "course": "CS3000",
+    "description": "Practice object-oriented programming concepts including classes, objects, encapsulation, and methods.",
+    "points": 75,
+    "availableDate": "2026-02-06T00:00:00-05:00",
+    "dueDate": "2026-02-13T23:59:00-05:00"
+  },
+  {
+    "_id": "A300002",
+    "title": "Inheritance and Polymorphism Exercise",
+    "course": "CS3000",
+    "description": "Implement inheritance hierarchies and demonstrate polymorphic behavior in object-oriented programs.",
+    "points": 75,
+    "availableDate": "2026-02-14T00:00:00-05:00",
+    "dueDate": "2026-02-21T23:59:00-05:00"
+  },
+  {
+    "_id": "A300003",
+    "title": "Design Patterns Project",
+    "course": "CS3000",
+    "description": "Apply common software design patterns to improve code structure, flexibility, and maintainability.",
+    "points": 100,
+    "availableDate": "2026-02-22T00:00:00-05:00",
+    "dueDate": "2026-03-01T23:59:00-05:00"
+  },
+
+  {
+    "_id": "A350001",
+    "title": "Data Structures Implementation",
+    "course": "CS3500",
+    "description": "Implement core data structures from scratch and analyze their time and space complexity.",
+    "points": 100,
+    "availableDate": "2026-02-06T00:00:00-05:00",
+    "dueDate": "2026-02-13T23:59:00-05:00"
+  },
+  {
+    "_id": "A350002",
+    "title": "Algorithm Analysis Homework",
+    "course": "CS3500",
+    "description": "Analyze algorithm performance using asymptotic notation and compare efficiency across approaches.",
+    "points": 75,
+    "availableDate": "2026-02-14T00:00:00-05:00",
+    "dueDate": "2026-02-21T23:59:00-05:00"
+  },
+  {
+    "_id": "A350003",
+    "title": "Graph Algorithms Assignment",
+    "course": "CS3500",
+    "description": "Implement and analyze graph algorithms such as BFS, DFS, and shortest path algorithms.",
+    "points": 100,
+    "availableDate": "2026-02-22T00:00:00-05:00",
+    "dueDate": "2026-03-01T23:59:00-05:00"
+  },
+
+  {
+    "_id": "A453001",
+    "title": "Agile Process Reflection",
+    "course": "CS4530",
+    "description": "Write a reflection on agile development practices and their impact on team collaboration and productivity.",
+    "points": 50,
+    "availableDate": "2026-02-06T00:00:00-05:00",
+    "dueDate": "2026-02-13T23:59:00-05:00"
+  },
+  {
+    "_id": "A453002",
+    "title": "Testing and Quality Lab",
+    "course": "CS4530",
+    "description": "Practice writing unit tests and evaluating software quality using automated testing frameworks.",
+    "points": 75,
+    "availableDate": "2026-02-14T00:00:00-05:00",
+    "dueDate": "2026-02-21T23:59:00-05:00"
+  },
+  {
+    "_id": "A453003",
+    "title": "System Design Project",
+    "course": "CS4530",
+    "description": "Design a scalable software system, focusing on architecture, trade-offs, and system components.",
+    "points": 100,
+    "availableDate": "2026-02-22T00:00:00-05:00",
+    "dueDate": "2026-03-01T23:59:00-05:00"
+  },
+
+  {
+    "_id": "A380001",
+    "title": "Automata and Regular Languages Homework",
+    "course": "CS3800",
+    "description": "Solve problems involving finite automata, regular expressions, and language recognition.",
+    "points": 50,
+    "availableDate": "2026-02-06T00:00:00-05:00",
+    "dueDate": "2026-02-13T23:59:00-05:00"
+  },
+  {
+    "_id": "A380002",
+    "title": "Context-Free Grammar Problems",
+    "course": "CS3800",
+    "description": "Analyze and construct context-free grammars and parse trees for formal languages.",
+    "points": 75,
+    "availableDate": "2026-02-14T00:00:00-05:00",
+    "dueDate": "2026-02-21T23:59:00-05:00"
+  },
+  {
+    "_id": "A380003",
+    "title": "Computability and Complexity Assignment",
+    "course": "CS3800",
+    "description": "Explore computability limits and complexity classes through formal proofs and problem-solving.",
+    "points": 75,
+    "availableDate": "2026-02-22T00:00:00-05:00",
+    "dueDate": "2026-03-01T23:59:00-05:00"
+  }
+]
