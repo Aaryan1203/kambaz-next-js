@@ -1,16 +1,19 @@
 "use client";
 import { Button, FormControl, ListGroup, ListGroupItem } from "react-bootstrap";
 import { useTodosStore } from "./useTodoStore";
+import { describe } from "node:test";
+import { useState } from "react";
+import { Todo } from "../../react-context/todos/todosContext";
 
 export default function ZustandTodos() {
-  const {
-    todos,
-    currentTodo,
-    setCurrentTodo,
-    addTodo,
-    deleteTodo,
-    updateTodo,
-  } = useTodosStore((state) => state);
+  const { todos, addTodo, deleteTodo, updateTodo } = useTodosStore(
+    (state) => state,
+  );
+
+  const [currentTodo, setCurrentTodo] = useState<Todo>({
+    id: "0",
+    description: "",
+  });
 
   return (
     <div id="wd-counter-context">
@@ -25,14 +28,20 @@ export default function ZustandTodos() {
               }
             />
             <Button
-              onClick={() => updateTodo(currentTodo)}
+              onClick={() => {
+                updateTodo(currentTodo);
+                setCurrentTodo({ id: "0", description: "" });
+              }}
               id="wd-update-todo-click"
               className="btn-warning"
             >
               Update
             </Button>
             <Button
-              onClick={() => addTodo(currentTodo.description)}
+              onClick={() => {
+                addTodo(currentTodo.description);
+                setCurrentTodo({ id: "0", description: "" });
+              }}
               id="wd-add-todo-click"
               className="btn-success"
             >

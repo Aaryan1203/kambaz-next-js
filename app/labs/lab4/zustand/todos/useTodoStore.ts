@@ -8,8 +8,6 @@ type Todo = {
 // Define the Todos state
 interface TodosState {
   todos: Todo[];
-  currentTodo: Todo;
-  setCurrentTodo: (todo: Todo) => void;
   addTodo: (description: string) => void;
   deleteTodo: (id: string) => void;
   updateTodo: (todo: Todo) => void;
@@ -21,8 +19,6 @@ export const useTodosStore = create<TodosState>((set) => ({
     { id: "1", description: "todo 1" },
     { id: "2", description: "todo 2" },
   ],
-  currentTodo: { id: "-1", description: "" },
-  setCurrentTodo: (todo: Todo) => set({ currentTodo: todo }),
   addTodo: (description: string) =>
     set((state) => ({
       todos: [

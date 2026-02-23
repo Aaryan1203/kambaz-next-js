@@ -1,16 +1,15 @@
 "use client";
 import { Button, FormControl, ListGroup, ListGroupItem } from "react-bootstrap";
-import { useTodos } from "./todosContext";
+import { Todo, useTodos } from "./todosContext";
+import { useState } from "react";
 
 export default function TodosContext() {
-  const {
-    todos,
-    currentTodo,
-    setCurrentTodo,
-    addTodo,
-    deleteTodo,
-    updateTodo,
-  } = useTodos()!;
+  const { todos, addTodo, deleteTodo, updateTodo } = useTodos()!;
+
+  const [currentTodo, setCurrentTodo] = useState<Todo>({
+    id: "-1",
+    description: "",
+  });
 
   return (
     <div id="wd-counter-context">
@@ -25,14 +24,20 @@ export default function TodosContext() {
               }
             />
             <Button
-              onClick={() => updateTodo(currentTodo)}
+              onClick={() => {
+                updateTodo(currentTodo);
+                setCurrentTodo({ id: "0", description: "" });
+              }}
               id="wd-update-todo-click"
               className="btn-warning"
             >
               Update
             </Button>
             <Button
-              onClick={() => addTodo(currentTodo.description)}
+              onClick={() => {
+                addTodo(currentTodo.description);
+                setCurrentTodo({ id: "0", description: "" });
+              }}
               id="wd-add-todo-click"
               className="btn-success"
             >
@@ -48,13 +53,17 @@ export default function TodosContext() {
             {todo.description}
             <div className="d-flex gap-2">
               <Button
-                onClick={() => setCurrentTodo(todo)}
+                onClick={() => {
+                  setCurrentTodo(todo);
+                }}
                 id="wd-set-todo-click"
               >
                 Edit
               </Button>
               <Button
-                onClick={() => deleteTodo(todo.id)}
+                onClick={() => {
+                  deleteTodo(todo.id);
+                }}
                 id="wd-delete-todo-click"
                 className="btn-danger"
               >
