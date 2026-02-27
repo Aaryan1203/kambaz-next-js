@@ -13,19 +13,20 @@ export default function ModuleControlButtons({
   editModule: (moduleId: string) => void;
 }) {
   return (
-    <div className="float-end">
+    <div className="float-end d-flex align-items-center gap-3">
       <FaPencil
         onClick={() => editModule(moduleId)}
-        className="text-primary me-3"
+        className="text-primary"
+        style={{ cursor: "pointer" }}
       />
       <FaTrash
-        className="text-danger me-2 mb-1"
+        className="text-danger"
         style={{ cursor: "pointer" }}
         onClick={() => deleteModule(moduleId)}
       />
       <GreenCheckmark />
-      <FaPlus />
-      <IoEllipsisVertical className="fs-4" />
+      <FaPlus style={{ cursor: "pointer" }} />
+      <IoEllipsisVertical className="fs-4" style={{ cursor: "pointer" }} />
     </div>
   );
 }

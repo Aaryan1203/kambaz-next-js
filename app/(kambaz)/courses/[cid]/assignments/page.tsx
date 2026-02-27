@@ -3,13 +3,15 @@
 import Link from "next/link";
 import { ListGroup, ListGroupItem } from "react-bootstrap";
 import { BsGripVertical } from "react-icons/bs";
-import LessonControlButtons from "../../../components/LessonControlButtons";
 import AssignmentControls from "./AssignmentControls";
 import AssignmentsControlButtons from "./AssignmentControlsButton";
 import { MdAssignment } from "react-icons/md";
-import { FaCaretDown } from "react-icons/fa";
+import { FaCaretDown, FaPlus } from "react-icons/fa";
 import { useParams } from "next/navigation";
-import * as db from "../../../database";
+import { useDispatch, useSelector } from "react-redux";
+import { RootState } from "../../../store";
+import { IoEllipsisVertical } from "react-icons/io5";
+import { deleteAssignment } from "./reducer";
 
 const formatDate = (date: string) => {
   const dateObject = new Date(date);
@@ -23,7 +25,10 @@ const formatDate = (date: string) => {
 
 export default function Assignments() {
   const { cid } = useParams();
-  const assignments = db.assignments;
+  const dispatch = useDispatch();
+  const { assignments } = useSelector(
+    (state: RootState) => state.assignmentsReducer,
+  );
 
   return (
     <div id="wd-assignments">
@@ -42,7 +47,8 @@ export default function Assignments() {
               <span className="badge rounded-pill border border-dark text-dark bg-transparent px-3 py-2">
                 40% of Total
               </span>
-              <AssignmentsControlButtons />
+              <FaPlus />
+              <IoEllipsisVertical className="fs-4" />
             </div>
           </div>
         </ListGroupItem>
@@ -74,7 +80,12 @@ export default function Assignments() {
                       </div>
                     </Link>
                   </div>
-                  <LessonControlButtons />
+                  <AssignmentsControlButtons
+                    assignmentId={assignment._id}
+                    deleteAssignment={(assignmentId) =>
+                      dispatch(deleteAssignment(assignmentId))
+                    }
+                  />
                 </div>
               </ListGroupItem>
             );
