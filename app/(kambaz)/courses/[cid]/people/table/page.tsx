@@ -4,10 +4,16 @@ import { Table } from "react-bootstrap";
 import { FaUserCircle } from "react-icons/fa";
 import * as db from "../../../../database";
 import { useParams } from "next/navigation";
+import { useSelector } from "react-redux";
+import { RootState } from "../../../../store";
 
 export default function PeopleTable() {
   const { cid } = useParams();
-  const { users, enrollments } = db;
+  const { users } = db;
+  const { enrollments } = useSelector(
+    (state: RootState) => state.enrollmentsReducer,
+  );
+
 
   return (
     <div id="wd-people-table">

@@ -1,7 +1,6 @@
 "use client";
 
 import { useParams } from "next/navigation";
-import * as db from "../../../../database";
 import Link from "next/link";
 import { RootState } from "../../../../store";
 import { useDispatch, useSelector } from "react-redux";
@@ -36,7 +35,6 @@ export default function AssignmentEditor() {
   );
 
   const onSubmit = () => {
-    console.log("ASSIGNMENT", assignment);
     currentAssignment
       ? dispatch(updateAssignment(assignment))
       : dispatch(addAssignment(assignment));

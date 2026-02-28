@@ -7,9 +7,6 @@ import { RootState } from "../store";
 import { Nav, NavItem, NavLink } from "react-bootstrap";
 export default function AccountNavigation() {
   const pathname = usePathname();
-  const linkClassName = (path: string) => {
-    return `list-group-item border-0 ${pathname.includes(path) ? "text-black active" : "text-danger"}`;
-  };
   const { currentUser } = useSelector(
     (state: RootState) => state.accountReducer,
   );
@@ -20,8 +17,8 @@ export default function AccountNavigation() {
       {links.map((link) => (
         <NavItem key={link}>
           <NavLink as={Link} href={link} active={pathname.endsWith(link)}>
-            {link}{" "}
-          </NavLink>{" "}
+            {link}
+          </NavLink>
         </NavItem>
       ))}
     </Nav>
