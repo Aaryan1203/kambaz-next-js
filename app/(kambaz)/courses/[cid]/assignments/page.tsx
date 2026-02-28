@@ -29,6 +29,10 @@ export default function Assignments() {
   const { assignments } = useSelector(
     (state: RootState) => state.assignmentsReducer,
   );
+  const { currentUser } = useSelector(
+    (state: RootState) => state.accountReducer,
+  );
+  const isFaculty = currentUser?.role === "FACULTY";
 
   return (
     <div id="wd-assignments">
@@ -64,23 +68,39 @@ export default function Assignments() {
                   <div className="d-flex align-items-center">
                     <BsGripVertical className="me-2 fs-3" />
                     <MdAssignment className="me-4 fs-3 text-success" />
-                    <Link
-                      href={`/courses/${cid}/assignments/${assignment._id}`}
-                      className="text-decoration-none text-black"
-                    >
+                    {isFaculty ? (
+                      <Link
+                        href={`/courses/${cid}/assignments/${assignment._id}`}
+                        className="text-decoration-none text-black"
+                      >
+                        <div className="d-flex flex-column">
+                          <strong>{assignment.title}</strong>
+                          <span>
+                            <span className="text-danger">
+                              Multiple Modules
+                            </span>
+                            | <strong>Not available until</strong>
+                            {formatDate(assignment.availableDate)} |
+                            <strong>Due</strong>
+                            {formatDate(assignment.dueDate)} | 100pts
+                          </span>
+                        </div>
+                      </Link>
+                    ) : (
                       <div className="d-flex flex-column">
                         <strong>{assignment.title}</strong>
                         <span>
-                          <span className="text-danger">Multiple Modules</span>{" "}
-                          | <strong>Not available until</strong>{" "}
-                          {formatDate(assignment.availableDate)} |{" "}
-                          <strong>Due</strong> {formatDate(assignment.dueDate)}{" "}
-                          | 100pts
+                          <span className="text-danger">Multiple Modules</span>|{" "}
+                          <strong>Not available until</strong>
+                          {formatDate(assignment.availableDate)} |
+                          <strong>Due</strong> {formatDate(assignment.dueDate)}|
+                          100pts
                         </span>
                       </div>
-                    </Link>
+                    )}
                   </div>
                   <AssignmentsControlButtons
+                    isFaculty={isFaculty}
                     assignmentId={assignment._id}
                     deleteAssignment={(assignmentId) =>
                       dispatch(deleteAssignment(assignmentId))

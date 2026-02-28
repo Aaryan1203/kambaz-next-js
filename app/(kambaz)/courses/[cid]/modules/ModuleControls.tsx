@@ -9,6 +9,9 @@ import { FaPlus } from "react-icons/fa6";
 import GreenCheckmark from "../../../components/GreenCheckmark";
 import ModuleEditor from "./ModuleEditor";
 import { useState } from "react";
+import { useSelector } from "react-redux";
+import { RootState } from "../../../store";
+
 export default function ModulesControls({
   moduleName,
   setModuleName,
@@ -21,6 +24,11 @@ export default function ModulesControls({
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+  const { currentUser } = useSelector(
+    (state: RootState) => state.accountReducer,
+  );
+  const isFaculty = currentUser?.role === "FACULTY";
+
   return (
     <div
       id="wd-modules-controls"
@@ -66,15 +74,20 @@ export default function ModulesControls({
           </DropdownItem>
         </DropdownMenu>
       </Dropdown>
-      <Button
-        className="btn btn-danger rounded-1"
-        size="lg"
-        id="wd-add-module-btn"
-        onClick={handleShow}
-      >
-        <FaPlus className="position-relative me-2" style={{ bottom: "1px" }} />
-        Module
-      </Button>
+      {isFaculty && (
+        <Button
+          className="btn btn-danger rounded-1"
+          size="lg"
+          id="wd-add-module-btn"
+          onClick={handleShow}
+        >
+          <FaPlus
+            className="position-relative me-2"
+            style={{ bottom: "1px" }}
+          />
+          Module
+        </Button>
+      )}
       <ModuleEditor
         show={show}
         handleClose={handleClose}
