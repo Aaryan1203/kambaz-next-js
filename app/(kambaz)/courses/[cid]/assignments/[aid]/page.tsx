@@ -1,33 +1,75 @@
 "use client";
 
 import { useParams } from "next/navigation";
-import { Button } from "react-bootstrap";
-import * as db from "../../../../database";
 import Link from "next/link";
+import { RootState } from "../../../../store";
+import { useDispatch, useSelector } from "react-redux";
+import { useState } from "react";
+import { Button, FormControl } from "react-bootstrap";
+import { addAssignment, updateAssignment } from "../reducer";
+import { useRouter } from "next/navigation";
 
 export default function AssignmentEditor() {
   const { aid, cid } = useParams();
-  const allAssignments = db.assignments;
-  const assignment = allAssignments.find(
+  const dispatch = useDispatch();
+  const router = useRouter();
+
+  const { assignments } = useSelector(
+    (state: RootState) => state.assignmentsReducer,
+  );
+
+  const currentAssignment = assignments.find(
     (assignment) => assignment._id === aid,
   );
+  const [assignment, setAssignment] = useState(
+    currentAssignment ?? {
+      _id: aid,
+      course: cid,
+      title: "",
+      description: "",
+      points: 0,
+      dueDate: "",
+      availableDate: "",
+      untilDate: "",
+    },
+  );
+
+  const onSubmit = () => {
+    currentAssignment
+      ? dispatch(updateAssignment(assignment))
+      : dispatch(addAssignment(assignment));
+    router.push(`/courses/${cid}/assignments`);
+  };
 
   return (
     <div id="wd-assignments-editor">
       <div className="d-flex flex-column gap-2">
         <label htmlFor="wd-name">Assignment Name</label>
-        <input
+        <FormControl
           id="wd-name"
           className="p-2 border"
-          defaultValue={assignment?.title}
+          value={assignment.title}
+          onChange={(e) => {
+            setAssignment((prev) =>
+              prev ? { ...prev, title: e.target.value } : prev,
+            );
+          }}
         />
       </div>
       <br />
-      <textarea
-        id="wd-description"
-        className="p-2 border"
-        defaultValue={assignment?.description}
-      />
+      <div className="d-flex flex-column gap-2">
+        <label htmlFor="wd-name">Description</label>
+        <FormControl
+          id="wd-description"
+          className="p-2 border"
+          value={assignment.description}
+          onChange={(e) => {
+            setAssignment((prev) =>
+              prev ? { ...prev, description: e.target.value } : prev,
+            );
+          }}
+        />
+      </div>
       <br />
       <br />
       <table className="w-100">
@@ -39,91 +81,19 @@ export default function AssignmentEditor() {
               </label>
             </td>
             <td className="w-100">
-              <input
+              <FormControl
                 id="wd-points"
                 className="form-control w-100"
-                defaultValue={assignment?.points}
+                value={assignment.points}
+                onChange={(e) => {
+                  const value = Number(e.currentTarget.value);
+                  setAssignment((prev) =>
+                    prev
+                      ? { ...prev, points: Number.isNaN(value) ? 0 : value }
+                      : prev,
+                  );
+                }}
               />
-            </td>
-          </tr>
-          <tr>
-            <td className="pe-3 text-end align-top text-nowrap">
-              <label htmlFor="wd-group" className="col-form-label">
-                Assignment Group
-              </label>
-            </td>
-            <td className="w-100">
-              <select id="wd-group" className="p-2 border rounded-md w-100">
-                <option>ASSIGNMENTS</option>
-                <option>QUIZZES</option>
-                <option>EXAMS</option>
-                <option>HOMEWORK</option>
-              </select>
-            </td>
-          </tr>
-          <tr>
-            <td className="pe-3 text-end align-top text-nowrap">
-              <label htmlFor="wd-display-grade-as" className="col-form-label">
-                Display Grade As
-              </label>
-            </td>
-            <td>
-              <select
-                id="wd-display-grade-as"
-                className="p-2 border rounded-md w-100"
-              >
-                <option>Percentage</option>
-                <option>Raw Score</option>
-              </select>
-            </td>
-          </tr>
-          <tr>
-            <td className="pe-3 text-end align-top text-nowrap">
-              <label htmlFor="wd-submission-type" className="col-form-label">
-                Submission Type
-              </label>
-            </td>
-            <td className="border p-3">
-              <select
-                id="wd-submission-type"
-                className="p-2 border rounded-md w-100"
-              >
-                <option>Online</option>
-                <option>In Person</option>
-              </select>
-              <br />
-              <br />
-              <div className="d-flex flex-column">
-                <label htmlFor="wd-text-entry">
-                  <strong>Online Entry Options</strong>
-                </label>
-                <div className="d-flex gap-2 align-items-center">
-                  <input type="checkbox" id="wd-text-entry" />
-                  <label htmlFor="wd-text-entry">Text Entry</label>
-                </div>
-                <br />
-                <div className="d-flex gap-2 align-items-center">
-                  <input type="checkbox" id="wd-website-url" />
-                  <label htmlFor="wd-website-url">Website URL</label>
-                </div>
-                <br />
-                <div className="d-flex gap-2 align-items-center">
-                  <input type="checkbox" id="wd-media-recordings" />
-                  <label htmlFor="wd-media-recordings">Media Recordings</label>
-                </div>
-                <br />
-                <div className="d-flex gap-2 align-items-center">
-                  <input type="checkbox" id="wd-student-annotation" />
-                  <label htmlFor="wd-student-annotation">
-                    Student Annotation
-                  </label>
-                </div>
-                <br />
-                <div className="d-flex gap-2 align-items-center">
-                  <input type="checkbox" id="wd-file-upload" />
-                  <label htmlFor="wd-file-upload">File Uploads</label>
-                </div>
-              </div>
             </td>
           </tr>
           <tr>
@@ -133,44 +103,59 @@ export default function AssignmentEditor() {
               </label>
             </td>
             <td className="border p-3">
-              <label htmlFor="wd-text-entry">
-                <strong>Assign To</strong>
-              </label>
               <div className="d-flex flex-column">
-                <input
-                  id="wd-assign-to"
-                  className="p-2 border mb-2"
-                  defaultValue={"Everyone"}
-                />
                 <label htmlFor="wd-due-date">
                   <strong>Due</strong>
                 </label>
-                <input
+                <FormControl
                   type="date"
                   id="wd-due-date"
                   className="p-2 border mb-2"
-                  defaultValue={assignment?.dueDate?.slice(0, 10)}
+                  value={assignment.dueDate.slice(0, 10)}
+                  onChange={(e) => {
+                    const d = e.currentTarget.value;
+                    setAssignment((prev) =>
+                      prev ? { ...prev, dueDate: `${d}T00:00:00-05:00` } : prev,
+                    );
+                  }}
                 />
                 <div className="d-flex gap-2">
                   <div className="d-flex flex-column">
                     <label htmlFor="wd-available-from">
                       <strong>Available From</strong>
                     </label>
-                    <input
+                    <FormControl
                       type="date"
                       id="wd-available-from"
-                      defaultValue={assignment?.availableDate?.slice(0, 10)}
+                      value={assignment.availableDate.slice(0, 10)}
                       className="p-2 border mb-2"
+                      onChange={(e) => {
+                        const d = e.currentTarget.value;
+                        setAssignment((prev) =>
+                          prev
+                            ? { ...prev, availableDate: `${d}T00:00:00-05:00` }
+                            : prev,
+                        );
+                      }}
                     />
                   </div>
                   <div className="d-flex flex-column">
                     <label htmlFor="wd-available-until">
                       <strong>Until</strong>
                     </label>
-                    <input
+                    <FormControl
                       type="date"
                       id="wd-available-until"
+                      value={assignment.untilDate.slice(0, 10)}
                       className="p-2 border mb-2"
+                      onChange={(e) => {
+                        const d = e.currentTarget.value;
+                        setAssignment((prev) =>
+                          prev
+                            ? { ...prev, untilDate: `${d}T00:00:00-05:00` }
+                            : prev,
+                        );
+                      }}
                     />
                   </div>
                 </div>
@@ -187,12 +172,9 @@ export default function AssignmentEditor() {
         >
           Cancel
         </Link>
-        <Link
-          href={`/courses/${cid}/assignments`}
-          className="btn btn-danger rounded-0"
-        >
+        <Button onClick={onSubmit} className="btn btn-danger rounded-0">
           Save
-        </Link>
+        </Button>
       </div>
     </div>
   );

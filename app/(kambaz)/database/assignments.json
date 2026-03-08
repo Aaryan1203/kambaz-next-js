@@ -6,7 +6,8 @@
     "description": "Build and compose reusable React components using JSX. Focus on props, component structure, and basic styling.",
     "points": 75,
     "availableDate": "2026-02-06T00:00:00-05:00",
-    "dueDate": "2026-02-13T23:59:00-05:00"
+    "dueDate": "2026-02-13T23:59:00-05:00",
+    "untilDate": "2026-02-20T23:59:00-05:00"
   },
   {
     "_id": "A123402",
@@ -15,7 +16,8 @@
     "description": "Practice using React hooks such as useState and useEffect to manage state and side effects in functional components.",
     "points": 75,
     "availableDate": "2026-02-14T00:00:00-05:00",
-    "dueDate": "2026-02-21T23:59:00-05:00"
+    "dueDate": "2026-02-21T23:59:00-05:00",
+    "untilDate": "2026-02-28T23:59:00-05:00"
   },
   {
     "_id": "A123403",
@@ -24,7 +26,8 @@
     "description": "Develop a full-stack React application that integrates a frontend UI with a backend API and persistent data storage.",
     "points": 100,
     "availableDate": "2026-02-22T00:00:00-05:00",
-    "dueDate": "2026-03-01T23:59:00-05:00"
+    "dueDate": "2026-03-01T23:59:00-05:00",
+    "untilDate": "2026-03-08T23:59:00-05:00"
   },
 
   {
@@ -34,7 +37,8 @@
     "description": "Solve a set of logic and algorithmic problems to strengthen structured problem-solving techniques.",
     "points": 50,
     "availableDate": "2026-02-06T00:00:00-05:00",
-    "dueDate": "2026-02-13T23:59:00-05:00"
+    "dueDate": "2026-02-13T23:59:00-05:00",
+    "untilDate": "2026-02-20T23:59:00-05:00"
   },
   {
     "_id": "A250002",
@@ -43,7 +47,8 @@
     "description": "Implement recursive functions and analyze their behavior, efficiency, and base cases.",
     "points": 75,
     "availableDate": "2026-02-14T00:00:00-05:00",
-    "dueDate": "2026-02-21T23:59:00-05:00"
+    "dueDate": "2026-02-21T23:59:00-05:00",
+    "untilDate": "2026-02-28T23:59:00-05:00"
   },
   {
     "_id": "A250003",
@@ -52,7 +57,8 @@
     "description": "Practice working with fundamental data structures such as lists, trees, and maps through guided exercises.",
     "points": 75,
     "availableDate": "2026-02-22T00:00:00-05:00",
-    "dueDate": "2026-03-01T23:59:00-05:00"
+    "dueDate": "2026-03-01T23:59:00-05:00",
+    "untilDate": "2026-03-08T23:59:00-05:00"
   },
 
   {
@@ -62,7 +68,8 @@
     "description": "Complete exercises involving propositional logic, predicates, and formal proofs.",
     "points": 50,
     "availableDate": "2026-02-06T00:00:00-05:00",
-    "dueDate": "2026-02-13T23:59:00-05:00"
+    "dueDate": "2026-02-13T23:59:00-05:00",
+    "untilDate": "2026-02-20T23:59:00-05:00"
   },
   {
     "_id": "A180002",
@@ -71,7 +78,8 @@
     "description": "Work with sets, relations, and functions, including proofs of properties such as transitivity and equivalence.",
     "points": 75,
     "availableDate": "2026-02-14T00:00:00-05:00",
-    "dueDate": "2026-02-21T23:59:00-05:00"
+    "dueDate": "2026-02-21T23:59:00-05:00",
+    "untilDate": "2026-02-28T23:59:00-05:00"
   },
   {
     "_id": "A180003",
@@ -80,7 +88,8 @@
     "description": "Solve graph theory problems involving paths, cycles, connectivity, and graph properties.",
     "points": 75,
     "availableDate": "2026-02-22T00:00:00-05:00",
-    "dueDate": "2026-03-01T23:59:00-05:00"
+    "dueDate": "2026-03-01T23:59:00-05:00",
+    "untilDate": "2026-03-08T23:59:00-05:00"
   },
 
   {
@@ -90,7 +99,8 @@
     "description": "Practice object-oriented programming concepts including classes, objects, encapsulation, and methods.",
     "points": 75,
     "availableDate": "2026-02-06T00:00:00-05:00",
-    "dueDate": "2026-02-13T23:59:00-05:00"
+    "dueDate": "2026-02-13T23:59:00-05:00",
+    "untilDate": "2026-02-20T23:59:00-05:00"
   },
   {
     "_id": "A300002",
@@ -99,7 +109,8 @@
     "description": "Implement inheritance hierarchies and demonstrate polymorphic behavior in object-oriented programs.",
     "points": 75,
     "availableDate": "2026-02-14T00:00:00-05:00",
-    "dueDate": "2026-02-21T23:59:00-05:00"
+    "dueDate": "2026-02-21T23:59:00-05:00",
+    "untilDate": "2026-02-28T23:59:00-05:00"
   },
   {
     "_id": "A300003",
@@ -108,7 +119,8 @@
     "description": "Apply common software design patterns to improve code structure, flexibility, and maintainability.",
     "points": 100,
     "availableDate": "2026-02-22T00:00:00-05:00",
-    "dueDate": "2026-03-01T23:59:00-05:00"
+    "dueDate": "2026-03-01T23:59:00-05:00",
+    "untilDate": "2026-03-08T23:59:00-05:00"
   },
 
   {
@@ -118,7 +130,8 @@
     "description": "Implement core data structures from scratch and analyze their time and space complexity.",
     "points": 100,
     "availableDate": "2026-02-06T00:00:00-05:00",
-    "dueDate": "2026-02-13T23:59:00-05:00"
+    "dueDate": "2026-02-13T23:59:00-05:00",
+    "untilDate": "2026-02-20T23:59:00-05:00"
   },
   {
     "_id": "A350002",
@@ -127,7 +140,8 @@
     "description": "Analyze algorithm performance using asymptotic notation and compare efficiency across approaches.",
     "points": 75,
     "availableDate": "2026-02-14T00:00:00-05:00",
-    "dueDate": "2026-02-21T23:59:00-05:00"
+    "dueDate": "2026-02-21T23:59:00-05:00",
+    "untilDate": "2026-02-28T23:59:00-05:00"
   },
   {
     "_id": "A350003",
@@ -136,7 +150,8 @@
     "description": "Implement and analyze graph algorithms such as BFS, DFS, and shortest path algorithms.",
     "points": 100,
     "availableDate": "2026-02-22T00:00:00-05:00",
-    "dueDate": "2026-03-01T23:59:00-05:00"
+    "dueDate": "2026-03-01T23:59:00-05:00",
+    "untilDate": "2026-03-08T23:59:00-05:00"
   },
 
   {
@@ -146,7 +161,8 @@
     "description": "Write a reflection on agile development practices and their impact on team collaboration and productivity.",
     "points": 50,
     "availableDate": "2026-02-06T00:00:00-05:00",
-    "dueDate": "2026-02-13T23:59:00-05:00"
+    "dueDate": "2026-02-13T23:59:00-05:00",
+    "untilDate": "2026-02-20T23:59:00-05:00"
   },
   {
     "_id": "A453002",
@@ -155,7 +171,8 @@
     "description": "Practice writing unit tests and evaluating software quality using automated testing frameworks.",
     "points": 75,
     "availableDate": "2026-02-14T00:00:00-05:00",
-    "dueDate": "2026-02-21T23:59:00-05:00"
+    "dueDate": "2026-02-21T23:59:00-05:00",
+    "untilDate": "2026-02-28T23:59:00-05:00"
   },
   {
     "_id": "A453003",
@@ -164,7 +181,8 @@
     "description": "Design a scalable software system, focusing on architecture, trade-offs, and system components.",
     "points": 100,
     "availableDate": "2026-02-22T00:00:00-05:00",
-    "dueDate": "2026-03-01T23:59:00-05:00"
+    "dueDate": "2026-03-01T23:59:00-05:00",
+    "untilDate": "2026-03-08T23:59:00-05:00"
   },
 
   {
@@ -174,7 +192,8 @@
     "description": "Solve problems involving finite automata, regular expressions, and language recognition.",
     "points": 50,
     "availableDate": "2026-02-06T00:00:00-05:00",
-    "dueDate": "2026-02-13T23:59:00-05:00"
+    "dueDate": "2026-02-13T23:59:00-05:00",
+    "untilDate": "2026-02-20T23:59:00-05:00"
   },
   {
     "_id": "A380002",
@@ -183,7 +202,8 @@
     "description": "Analyze and construct context-free grammars and parse trees for formal languages.",
     "points": 75,
     "availableDate": "2026-02-14T00:00:00-05:00",
-    "dueDate": "2026-02-21T23:59:00-05:00"
+    "dueDate": "2026-02-21T23:59:00-05:00",
+    "untilDate": "2026-02-28T23:59:00-05:00"
   },
   {
     "_id": "A380003",
@@ -192,6 +212,7 @@
     "description": "Explore computability limits and complexity classes through formal proofs and problem-solving.",
     "points": 75,
     "availableDate": "2026-02-22T00:00:00-05:00",
-    "dueDate": "2026-03-01T23:59:00-05:00"
+    "dueDate": "2026-03-01T23:59:00-05:00",
+    "untilDate": "2026-03-08T23:59:00-05:00"
   }
 ]

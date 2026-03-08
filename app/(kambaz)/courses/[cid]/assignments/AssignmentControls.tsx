@@ -1,16 +1,12 @@
-import {
-  Button,
-  Dropdown,
-  DropdownItem,
-  DropdownMenu,
-  DropdownToggle,
-} from "react-bootstrap";
+"use client";
+import { Button } from "react-bootstrap";
 import { FaPlus } from "react-icons/fa6";
-import { InputGroup, FormControl } from "react-bootstrap";
-import GreenCheckmark from "../../../components/GreenCheckmark";
 import { CiSearch } from "react-icons/ci";
+import { v4 as uuidv4 } from "uuid";
+import { useRouter } from "next/navigation";
 
 export default function AssignmentControls() {
+  const router = useRouter();
   return (
     <div
       id="wd-modules-controls"
@@ -44,6 +40,9 @@ export default function AssignmentControls() {
           className="btn btn-danger rounded-1"
           size="lg"
           id="wd-add-module-btn"
+          onClick={() => {
+            router.push(`assignments/new`);
+          }}
         >
           <FaPlus
             className="position-relative me-2"
