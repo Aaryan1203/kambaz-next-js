@@ -33,9 +33,20 @@ export const createNewTodo = async () => {
   return response.data;
 };
 
-export const updateTodoCompleted = async (todo: { id: string; completed: boolean }) => {
-  const response = await axios.get(
-    `${TODOS_API}/${todo.id}/completed/${todo.completed}`,
-  );
+export const postNewTodo = async (todo: {
+  title: string;
+  completed: boolean;
+}) => {
+  const response = await axios.post(`${TODOS_API}`, todo);
+  return response.data;
+};
+
+export const deleteTodo = async (todo: { id: string }) => {
+  const response = await axios.delete(`${TODOS_API}/${todo.id}`);
+  return response.data;
+};
+
+export const updateTodo = async (todo: { id: string }) => {
+  const response = await axios.put(`${TODOS_API}/${todo.id}`, todo);
   return response.data;
 };

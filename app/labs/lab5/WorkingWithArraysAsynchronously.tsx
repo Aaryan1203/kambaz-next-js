@@ -1,16 +1,35 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import * as client from "./client";
-import { ListGroup, ListGroupItem } from "react-bootstrap";
+import { FormControl, ListGroup, ListGroupItem } from "react-bootstrap";
 import { FaTrash, FaPlusCircle } from "react-icons/fa";
+import { TiDelete } from "react-icons/ti";
+import { FaPencil } from "react-icons/fa6";
 
 export default function WorkingWithArraysAsynchronously() {
   const [todos, setTodos] = useState<any[]>([]);
+  const [errorMessage, setErrorMessage] = useState(null);
+
   const fetchTodos = async () => {
     const todos = await client.fetchTodos();
     setTodos(todos);
   };
+  const editTodo = (todo: any) => {
+    const updatedTodos = todos.map((t) =>
+      t.id === todo.id ? { ...todo, editing: true } : t,
+    );
+    setTodos(updatedTodos);
+  };
+  const updateTodo = async (todo: any) => {
+    try {
+      await client.updateTodo(todo);
+      setTodos(todos.map((t) => (t.id === todo.id ? todo : t)));
+    } catch (error: any) {
+      setErrorMessage(error.response.data.message);
+    }
+  };
+
   const removeTodo = async (todo: any) => {
     const updatedTodos = await client.removeTodo(todo);
     setTodos(updatedTodos);
@@ -19,9 +38,22 @@ export default function WorkingWithArraysAsynchronously() {
     const todos = await client.createNewTodo();
     setTodos(todos);
   };
-  const updateTodoCompleted = async (todo: any) => {
-    const updatedTodos = await client.updateTodoCompleted(todo);
-    setTodos(updatedTodos);
+  const postNewTodo = async () => {
+    const newTodo = await client.postNewTodo({
+      title: "New Posted Todo",
+      completed: false,
+    });
+    setTodos([...todos, newTodo]);
+  };
+  const deleteTodo = async (todo: any) => {
+    try {
+      await client.deleteTodo(todo);
+      const newTodos = todos.filter((t) => t.id !== todo.id);
+      setTodos(newTodos);
+    } catch (error: any) {
+      console.log(error);
+      setErrorMessage(error.response.data.message);
+    }
   };
 
   useEffect(() => {
@@ -30,37 +62,75 @@ export default function WorkingWithArraysAsynchronously() {
   return (
     <div id="wd-asynchronous-arrays">
       <h3>Working with Arrays Asynchronously</h3>
+      {errorMessage && (
+        <div
+          id="wd-todo-error-message"
+          className="alert alert-danger mb-2 mt-2"
+        >
+          {errorMessage}
+        </div>
+      )}
       <h4>
         Todos
         <FaPlusCircle
           onClick={createNewTodo}
           className="text-success float-end fs-3"
         />
+        <FaPlusCircle
+          onClick={postNewTodo}
+          className="text-primary float-end fs-3 me-3"
+          id="wd-post-todo"
+        />
       </h4>
       <ListGroup>
         {todos.map((todo) => (
-          <ListGroupItem key={todo.id}>
-            <FaTrash
-              onClick={() => removeTodo(todo)}
-              className="text-danger float-end mt-1 "
-              id="wd-remove-todo"
-            />
+          <ListGroupItem key={todo.id} className="d-flex align-items-center">
             <input
               type="checkbox"
               className="form-check-input me-2"
-              checked={todo.completed === "true"}
+              checked={todo.completed}
               onChange={(e) =>
-                updateTodoCompleted({ ...todo, completed: e.target.checked })
+                updateTodo({ ...todo, completed: e.target.checked })
               }
             />
-            <span
-              style={{
-                textDecoration:
-                  todo.completed === "true" ? "line-through" : "none",
-              }}
-            >
-              {todo.title}
-            </span>
+
+            <div className="flex-grow-1 me-2">
+              {!todo.editing ? (
+                <div
+                  style={{
+                    textDecoration: todo.completed ? "line-through" : "none",
+                  }}
+                >
+                  {todo.title}
+                </div>
+              ) : (
+                <FormControl
+                  value={todo.title}
+                  onKeyDown={(e) => {
+                    if (e.key === "Enter") {
+                      updateTodo({ ...todo, editing: false });
+                    }
+                  }}
+                  onChange={(e) =>
+                    setTodos(
+                      todos.map((t) =>
+                        t.id === todo.id ? { ...t, title: e.target.value } : t,
+                      ),
+                    )
+                  }
+                />
+              )}
+            </div>
+
+            <FaPencil
+              onClick={() => editTodo(todo)}
+              className="text-primary me-2"
+            />
+            <TiDelete
+              onClick={() => deleteTodo(todo)}
+              className="text-danger me-2 fs-3"
+            />
+            <FaTrash onClick={() => removeTodo(todo)} className="text-danger" />
           </ListGroupItem>
         ))}
       </ListGroup>
