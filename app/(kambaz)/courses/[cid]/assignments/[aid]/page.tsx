@@ -8,6 +8,7 @@ import { useState } from "react";
 import { Button, FormControl } from "react-bootstrap";
 import { addAssignment, updateAssignment } from "../reducer";
 import { useRouter } from "next/navigation";
+import * as client from "../../../client";
 
 export default function AssignmentEditor() {
   const { aid, cid } = useParams();
@@ -35,10 +36,25 @@ export default function AssignmentEditor() {
   );
 
   const onSubmit = () => {
-    currentAssignment
-      ? dispatch(updateAssignment(assignment))
-      : dispatch(addAssignment(assignment));
+    currentAssignment ? onUpdateAssignment() : onCreateAssignmentForCourse();
     router.push(`/courses/${cid}/assignments`);
+  };
+
+  const onCreateAssignmentForCourse = async () => {
+    if (!cid) return;
+    const newAssignment = await client.createAssignmentForCourse(
+      cid as string,
+      assignment,
+    );
+    dispatch(addAssignment(newAssignment));
+  };
+
+  const onUpdateAssignment = async () => {
+    await client.updateAssignment(assignment);
+    const newAssignments = assignments.map((a: any) =>
+      a._id === assignment._id ? assignment : a,
+    );
+    dispatch(updateAssignment(newAssignments));
   };
 
   return (

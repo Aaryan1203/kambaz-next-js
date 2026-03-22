@@ -11,7 +11,9 @@ import { useParams } from "next/navigation";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../../store";
 import { IoEllipsisVertical } from "react-icons/io5";
-import { deleteAssignment } from "./reducer";
+import { deleteAssignment, setAssignments } from "./reducer";
+import { useEffect } from "react";
+import * as client from "../../client";
 
 const formatDate = (date: string) => {
   const dateObject = new Date(date);
@@ -34,6 +36,22 @@ export default function Assignments() {
   );
   const isFaculty = currentUser?.role === "FACULTY";
 
+  const fetchAssignments = async () => {
+    const assignments = await client.findAssignmentsForCourse(cid as string);
+    dispatch(setAssignments(assignments));
+  };
+
+  useEffect(() => {
+    fetchAssignments();
+  }, []);
+
+  const onRemoveAssignment = async (assignmentId: string) => {
+    await client.deleteAssignment(assignmentId);
+    dispatch(
+      setAssignments(assignments.filter((a: any) => a._id !== assignmentId)),
+    );
+  };
+
   return (
     <div id="wd-assignments">
       <AssignmentControls />
@@ -51,65 +69,60 @@ export default function Assignments() {
               <span className="badge rounded-pill border border-dark text-dark bg-transparent px-3 py-2">
                 40% of Total
               </span>
-              <FaPlus />
+              {isFaculty && <FaPlus />}
               <IoEllipsisVertical className="fs-4" />
             </div>
           </div>
         </ListGroupItem>
-        {assignments
-          .filter((assignment) => assignment.course === cid)
-          .map((assignment) => {
-            return (
-              <ListGroupItem
-                className={"p-3 wd-assignment"}
-                key={`assignment-${assignment._id}`}
-              >
-                <div className="d-flex justify-content-between align-items-center">
-                  <div className="d-flex align-items-center">
-                    <BsGripVertical className="me-2 fs-3" />
-                    <MdAssignment className="me-4 fs-3 text-success" />
-                    {isFaculty ? (
-                      <Link
-                        href={`/courses/${cid}/assignments/${assignment._id}`}
-                        className="text-decoration-none text-black"
-                      >
-                        <div className="d-flex flex-column">
-                          <strong>{assignment.title}</strong>
-                          <span>
-                            <span className="text-danger">
-                              Multiple Modules
-                            </span>
-                            | <strong>Not available until</strong>
-                            {formatDate(assignment.availableDate)} |
-                            <strong>Due</strong>
-                            {formatDate(assignment.dueDate)} | 100pts
-                          </span>
-                        </div>
-                      </Link>
-                    ) : (
+        {assignments.map((assignment) => {
+          return (
+            <ListGroupItem
+              className={"p-3 wd-assignment"}
+              key={`assignment-${assignment._id}`}
+            >
+              <div className="d-flex justify-content-between align-items-center">
+                <div className="d-flex align-items-center">
+                  <BsGripVertical className="me-2 fs-3" />
+                  <MdAssignment className="me-4 fs-3 text-success" />
+                  {isFaculty ? (
+                    <Link
+                      href={`/courses/${cid}/assignments/${assignment._id}`}
+                      className="text-decoration-none text-black"
+                    >
                       <div className="d-flex flex-column">
                         <strong>{assignment.title}</strong>
                         <span>
-                          <span className="text-danger">Multiple Modules</span>|{" "}
-                          <strong>Not available until</strong>
+                          <span className="text-danger">Multiple Modules </span>
+                          | <strong>Not available until </strong>
                           {formatDate(assignment.availableDate)} |
-                          <strong>Due</strong> {formatDate(assignment.dueDate)}|
-                          100pts
+                          <strong> Due </strong>
+                          {formatDate(assignment.dueDate)} | {assignment.points}
+                          pts
                         </span>
                       </div>
-                    )}
-                  </div>
-                  <AssignmentsControlButtons
-                    isFaculty={isFaculty}
-                    assignmentId={assignment._id}
-                    deleteAssignment={(assignmentId) =>
-                      dispatch(deleteAssignment(assignmentId))
-                    }
-                  />
+                    </Link>
+                  ) : (
+                    <div className="d-flex flex-column">
+                      <strong>{assignment.title}</strong>
+                      <span>
+                        <span className="text-danger">Multiple Modules</span>|{" "}
+                        <strong>Not available until</strong>
+                        {formatDate(assignment.availableDate)} |
+                        <strong>Due</strong> {formatDate(assignment.dueDate)}|
+                        {assignment.points}pts
+                      </span>
+                    </div>
+                  )}
                 </div>
-              </ListGroupItem>
-            );
-          })}
+                <AssignmentsControlButtons
+                  isFaculty={isFaculty}
+                  assignmentId={assignment._id}
+                  deleteAssignment={onRemoveAssignment}
+                />
+              </div>
+            </ListGroupItem>
+          );
+        })}
       </ListGroup>
     </div>
   );
