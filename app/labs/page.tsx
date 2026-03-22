@@ -39,7 +39,23 @@ export default function labs() {
             href="https://github.com/Aaryan1203/kambaz-next-js"
             id="wd-github"
           >
-            Github
+            React app GitHub
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="https://github.com/Aaryan1203/kambaz-node-server-app"
+            id="wd-github"
+          >
+            Node server GitHub
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="https://kambaz-node-server-app-lzcs.onrender.com"
+            id="wd-github"
+          >
+            Node server Root
           </Link>
         </li>
       </ul>

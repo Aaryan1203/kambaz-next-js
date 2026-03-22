@@ -40,7 +40,23 @@ export default function TOC() {
           href="https://github.com/Aaryan1203/kambaz-next-js"
           id="wd-github"
         >
-          GitHub
+          React app GitHub
+        </NavLink>
+      </NavItem>
+      <NavItem>
+        <NavLink
+          href="https://github.com/Aaryan1203/kambaz-node-server-app"
+          id="wd-github"
+        >
+          Node server GitHub
+        </NavLink>
+      </NavItem>
+      <NavItem>
+        <NavLink
+          href="https://kambaz-node-server-app-lzcs.onrender.com"
+          id="wd-github"
+        >
+          Node server Root
         </NavLink>
       </NavItem>
     </Nav>
