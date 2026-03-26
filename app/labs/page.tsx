@@ -25,6 +25,11 @@ export default function labs() {
           </Link>
         </li>
         <li>
+          <Link href="/labs/lab4" id="wd-lab3-link">
+            Lab 5: Implementing RESTful Web APIs with Express.js
+          </Link>
+        </li>
+        <li>
           <Link href="/" id="wd-lab3-link">
             Kambaz
           </Link>
@@ -34,7 +39,23 @@ export default function labs() {
             href="https://github.com/Aaryan1203/kambaz-next-js"
             id="wd-github"
           >
-            Github
+            React app GitHub
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="https://github.com/Aaryan1203/kambaz-node-server-app"
+            id="wd-github"
+          >
+            Node server GitHub
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="https://kambaz-node-server-app-lzcs.onrender.com"
+            id="wd-github"
+          >
+            Node server Root
           </Link>
         </li>
       </ul>

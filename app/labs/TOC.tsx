@@ -17,7 +17,7 @@ export default function TOC() {
           Labs
         </NavLink>
       </NavItem>
-      {[1, 2, 3, 4].map((labNumber) => {
+      {[1, 2, 3, 4, 5].map((labNumber) => {
         return (
           <NavItem key={`lab-${labNumber}`}>
             <NavLink
@@ -40,7 +40,23 @@ export default function TOC() {
           href="https://github.com/Aaryan1203/kambaz-next-js"
           id="wd-github"
         >
-          GitHub
+          React app GitHub
+        </NavLink>
+      </NavItem>
+      <NavItem>
+        <NavLink
+          href="https://github.com/Aaryan1203/kambaz-node-server-app"
+          id="wd-github"
+        >
+          Node server GitHub
+        </NavLink>
+      </NavItem>
+      <NavItem>
+        <NavLink
+          href="https://kambaz-node-server-app-lzcs.onrender.com"
+          id="wd-github"
+        >
+          Node server Root
         </NavLink>
       </NavItem>
     </Nav>

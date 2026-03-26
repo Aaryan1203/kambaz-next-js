@@ -2,17 +2,23 @@
 import { Button } from "react-bootstrap";
 import { FaPlus } from "react-icons/fa6";
 import { CiSearch } from "react-icons/ci";
-import { v4 as uuidv4 } from "uuid";
 import { useRouter } from "next/navigation";
+import { useSelector } from "react-redux";
+import { RootState } from "../../../store";
 
 export default function AssignmentControls() {
   const router = useRouter();
+  const { currentUser } = useSelector(
+    (state: RootState) => state.accountReducer,
+  );
+  const isFaculty = currentUser?.role === "FACULTY";
+
   return (
     <div
       id="wd-modules-controls"
       className="d-flex align-items-center justify-content-between gap-2"
     >
-      <div className="position-relative flex-grow-1 me-3">
+      <div className="position-relative flex-grow-1">
         <CiSearch
           className="position-absolute text-muted fs-5"
           style={{ left: "12px", top: "50%", transform: "translateY(-50%)" }}
@@ -25,31 +31,35 @@ export default function AssignmentControls() {
         />
       </div>
       <div className="d-flex gap-2">
-        <Button
-          className="btn btn-secondary rounded-1"
-          size="lg"
-          id="wd-collapse-all"
-        >
-          <FaPlus
-            className="position-relative me-2"
-            style={{ bottom: "1px" }}
-          />
-          Group
-        </Button>
-        <Button
-          className="btn btn-danger rounded-1"
-          size="lg"
-          id="wd-add-module-btn"
-          onClick={() => {
-            router.push(`assignments/new`);
-          }}
-        >
-          <FaPlus
-            className="position-relative me-2"
-            style={{ bottom: "1px" }}
-          />
-          Assignment
-        </Button>
+        {isFaculty && (
+          <>
+            <Button
+              className="btn btn-secondary rounded-1"
+              size="lg"
+              id="wd-collapse-all"
+            >
+              <FaPlus
+                className="position-relative me-2"
+                style={{ bottom: "1px" }}
+              />
+              Group
+            </Button>
+            <Button
+              className="btn btn-danger rounded-1"
+              size="lg"
+              id="wd-add-module-btn"
+              onClick={() => {
+                router.push(`assignments/new`);
+              }}
+            >
+              <FaPlus
+                className="position-relative me-2"
+                style={{ bottom: "1px" }}
+              />
+              Assignment
+            </Button>
+          </>
+        )}
       </div>
     </div>
   );
