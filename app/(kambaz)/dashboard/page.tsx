@@ -48,10 +48,16 @@ export default function Dashboard() {
 
   const fetchCourses = async () => {
     try {
-      const usersCourses = await client.findMyCourses();
-      const allCourses = await client.fetchAllCourses();
-      dispatch(setCourses(usersCourses));
-      setAllCourses(allCourses);
+      if (currentUser) {
+        const usersCourses = await client.findMyCourses();
+        const allCourses = await client.fetchAllCourses();
+        dispatch(setCourses(usersCourses));
+        setAllCourses(allCourses);
+      } else {
+        const allCourses = await client.fetchAllCourses();
+        dispatch(setCourses(allCourses));
+        setAllCourses(allCourses);
+      }
     } catch (error) {
       console.error(error);
     }
@@ -171,7 +177,7 @@ export default function Dashboard() {
         </div>
       )}
       <h2 id="wd-dashboard-published">
-        {showEnrollments
+        {showEnrollments || !currentUser
           ? `All Courses (${allCourses.length})`
           : `Your Courses (${usersCourses.length})`}
       </h2>

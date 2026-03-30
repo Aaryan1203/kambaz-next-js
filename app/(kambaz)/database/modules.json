@@ -1,553 +1,632 @@
 [
   {
-    "_id": "M123401",
-    "name": "React Basics",
-    "description": "Core React concepts, JSX, components, and props.",
-    "course": "CS1234",
+    "_id": "MRS10101",
+    "name": "Introduction to Rocket Propulsion",
+    "description": "Basic principles of rocket propulsion and rocket engines.",
+    "course": "RS101",
     "lessons": [
       {
-        "_id": "L12340101",
-        "name": "JSX and Rendering",
-        "description": "How JSX becomes UI and how React renders components.",
-        "module": "M123401"
+        "_id": "LRS1010101",
+        "name": "History of Rocketry",
+        "description": "A brief history of rocketry and space exploration.",
+        "module": "MRS10101"
       },
       {
-        "_id": "L12340102",
-        "name": "Props and Component Composition",
-        "description": "Passing data with props and building UIs by composing components.",
-        "module": "M123401"
+        "_id": "LRS1010102",
+        "name": "Rocket Propulsion Fundamentals",
+        "description": "Basic principles of rocket propulsion.",
+        "module": "MRS10101"
       },
       {
-        "_id": "L12340103",
-        "name": "State with useState",
-        "description": "Using state to make components interactive.",
-        "module": "M123401"
+        "_id": "LRS1010103",
+        "name": "Rocket Engine Types",
+        "description": "Overview of different types of rocket engines.",
+        "module": "MRS10101"
       }
     ]
   },
   {
-    "_id": "M123402",
-    "name": "React Hooks and Patterns",
-    "description": "Hooks, effects, and common patterns for building React apps.",
-    "course": "CS1234",
+    "_id": "MRS10102",
+    "name": "Fuel and Combustion",
+    "description": "Understanding rocket fuel, combustion processes, and efficiency.",
+    "course": "RS101",
     "lessons": [
       {
-        "_id": "L12340201",
-        "name": "useEffect Fundamentals",
-        "description": "Side effects, dependencies, and cleanup in React.",
-        "module": "M123402"
+        "_id": "LRS1010201",
+        "name": "Rocket Fuel",
+        "description": "Overview of different types of rocket fuels.",
+        "module": "MRS10102"
       },
       {
-        "_id": "L12340202",
-        "name": "Conditional Rendering",
-        "description": "Showing different UI based on state and data.",
-        "module": "M123402"
+        "_id": "LRS1010202",
+        "name": "Combustion Processes",
+        "description": "Understanding combustion processes and efficiency.",
+        "module": "MRS10102"
       },
       {
-        "_id": "L12340203",
-        "name": "Lists and Keys",
-        "description": "Rendering arrays correctly and using stable keys.",
-        "module": "M123402"
+        "_id": "LRS1010203",
+        "name": "Combustion Instability",
+        "description": "Understanding combustion instability and mitigation.",
+        "module": "MRS10102"
       }
     ]
   },
   {
-    "_id": "M123403",
-    "name": "Full Stack React",
-    "description": "Connecting React to APIs, routing, and deployment basics.",
-    "course": "CS1234",
+    "_id": "MRS10103",
+    "name": "Nozzle Design",
+    "description": "Principles of rocket nozzle design and performance optimization.",
+    "course": "RS101",
     "lessons": [
       {
-        "_id": "L12340301",
-        "name": "Fetching Data",
-        "description": "Calling APIs and handling loading and error states.",
-        "module": "M123403"
+        "_id": "LRS1010301",
+        "name": "Nozzle Design",
+        "description": "Overview of different types of rocket nozzles.",
+        "module": "MRS10103"
       },
       {
-        "_id": "L12340302",
-        "name": "Client vs Server Concepts",
-        "description": "Understanding what runs in the browser versus the server.",
-        "module": "M123403"
+        "_id": "LRS1010302",
+        "name": "Nozzle Performance",
+        "description": "Understanding nozzle performance and efficiency.",
+        "module": "MRS10103"
       },
       {
-        "_id": "L12340303",
-        "name": "Deploying a React App",
-        "description": "Build output basics and what deployment needs.",
-        "module": "M123403"
-      }
-    ]
-  },
-
-  {
-    "_id": "M250001",
-    "name": "Problem Solving Foundations",
-    "description": "How to think like a programmer: decomposition, patterns, and practice.",
-    "course": "CS2500",
-    "lessons": [
-      {
-        "_id": "L25000101",
-        "name": "Computational Thinking",
-        "description": "Breaking problems down into steps and reusable pieces.",
-        "module": "M250001"
-      },
-      {
-        "_id": "L25000102",
-        "name": "Variables and Data Types",
-        "description": "Representing information and choosing appropriate types.",
-        "module": "M250001"
-      },
-      {
-        "_id": "L25000103",
-        "name": "Control Flow",
-        "description": "Conditionals and loops for decision making and repetition.",
-        "module": "M250001"
-      }
-    ]
-  },
-  {
-    "_id": "M250002",
-    "name": "Functions and Abstraction",
-    "description": "Writing reusable code using functions and abstraction techniques.",
-    "course": "CS2500",
-    "lessons": [
-      {
-        "_id": "L25000201",
-        "name": "Defining Functions",
-        "description": "Parameters, return values, and clean function design.",
-        "module": "M250002"
-      },
-      {
-        "_id": "L25000202",
-        "name": "Testing Basics",
-        "description": "Writing simple tests to validate program behavior.",
-        "module": "M250002"
-      },
-      {
-        "_id": "L25000203",
-        "name": "Recursion Intro",
-        "description": "Solving problems by defining them in terms of smaller versions.",
-        "module": "M250002"
-      }
-    ]
-  },
-  {
-    "_id": "M250003",
-    "name": "Data Structures Intro",
-    "description": "Working with collections and building basic data structure intuition.",
-    "course": "CS2500",
-    "lessons": [
-      {
-        "_id": "L25000301",
-        "name": "Arrays and Lists",
-        "description": "Storing sequences and iterating through data.",
-        "module": "M250003"
-      },
-      {
-        "_id": "L25000302",
-        "name": "Maps and Sets",
-        "description": "Key-value storage and unique collections.",
-        "module": "M250003"
-      },
-      {
-        "_id": "L25000303",
-        "name": "Big-O Intuition",
-        "description": "A first look at performance and efficiency tradeoffs.",
-        "module": "M250003"
+        "_id": "LRS1010303",
+        "name": "Nozzle Optimization",
+        "description": "Optimizing nozzle design for specific applications.",
+        "module": "MRS10103"
       }
     ]
   },
 
   {
-    "_id": "M180001",
-    "name": "Logic and Proofs",
-    "description": "Propositional logic and proof techniques used in CS.",
-    "course": "CS1800",
+    "_id": "MRS10201",
+    "name": "Fundamentals of Aerodynamics",
+    "description": "Basic aerodynamic concepts and fluid dynamics principles.",
+    "course": "RS102",
     "lessons": [
       {
-        "_id": "L18000101",
-        "name": "Propositional Logic",
-        "description": "Statements, truth tables, and logical equivalences.",
-        "module": "M180001"
+        "_id": "LRS1020101",
+        "name": "Fluid Dynamics Basics",
+        "description": "Pressure, velocity fields, and the continuity equation.",
+        "module": "MRS10201"
       },
       {
-        "_id": "L18000102",
-        "name": "Implications and Quantifiers",
-        "description": "Working with forall/exists and translating statements carefully.",
-        "module": "M180001"
+        "_id": "LRS1020102",
+        "name": "Lift and Drag Forces",
+        "description": "How airfoil shape generates lift and the sources of drag.",
+        "module": "MRS10201"
       },
       {
-        "_id": "L18000103",
-        "name": "Proof Methods",
-        "description": "Direct proof, contradiction, and contrapositive.",
-        "module": "M180001"
+        "_id": "LRS1020103",
+        "name": "Airfoil Design",
+        "description": "Principles of airfoil geometry and performance parameters.",
+        "module": "MRS10201"
       }
     ]
   },
   {
-    "_id": "M180002",
-    "name": "Sets, Relations, and Functions",
-    "description": "Core discrete math structures used throughout computing.",
-    "course": "CS1800",
+    "_id": "MRS10202",
+    "name": "Subsonic and Supersonic Flow",
+    "description": "Understanding subsonic and supersonic aerodynamic behaviors.",
+    "course": "RS102",
     "lessons": [
       {
-        "_id": "L18000201",
-        "name": "Set Operations",
-        "description": "Union, intersection, power sets, and set identities.",
-        "module": "M180002"
+        "_id": "LRS1020201",
+        "name": "Subsonic Flow Regime",
+        "description": "Characteristics of airflow at speeds below the speed of sound.",
+        "module": "MRS10202"
       },
       {
-        "_id": "L18000202",
-        "name": "Relations",
-        "description": "Equivalence relations, partial orders, and properties.",
-        "module": "M180002"
+        "_id": "LRS1020202",
+        "name": "Transonic and Supersonic Transitions",
+        "description": "Flow behavior near and beyond Mach 1, including shock waves.",
+        "module": "MRS10202"
       },
       {
-        "_id": "L18000203",
-        "name": "Functions",
-        "description": "Injective, surjective, bijective, and composition.",
-        "module": "M180002"
+        "_id": "LRS1020203",
+        "name": "Shock Waves and Expansion Fans",
+        "description": "Formation and effects of oblique shocks and Prandtl-Meyer expansions.",
+        "module": "MRS10202"
       }
     ]
   },
   {
-    "_id": "M180003",
-    "name": "Counting and Graphs",
-    "description": "Counting techniques and graph fundamentals.",
-    "course": "CS1800",
+    "_id": "MRS10203",
+    "name": "Aerodynamic Heating",
+    "description": "Study of aerodynamic heating and thermal protection systems.",
+    "course": "RS102",
     "lessons": [
       {
-        "_id": "L18000301",
-        "name": "Combinatorics Basics",
-        "description": "Permutations, combinations, and counting strategies.",
-        "module": "M180003"
+        "_id": "LRS1020301",
+        "name": "Sources of Aerodynamic Heating",
+        "description": "How friction and compression generate heat on high-speed vehicles.",
+        "module": "MRS10203"
       },
       {
-        "_id": "L18000302",
-        "name": "Induction",
-        "description": "Mathematical induction and strong induction proofs.",
-        "module": "M180003"
+        "_id": "LRS1020302",
+        "name": "Thermal Protection Systems",
+        "description": "Materials and design approaches for managing extreme heat loads.",
+        "module": "MRS10203"
       },
       {
-        "_id": "L18000303",
-        "name": "Graph Fundamentals",
-        "description": "Vertices, edges, paths, cycles, and basic graph properties.",
-        "module": "M180003"
-      }
-    ]
-  },
-
-  {
-    "_id": "M300001",
-    "name": "OOP Fundamentals",
-    "description": "Classes, objects, encapsulation, and basic OOP design ideas.",
-    "course": "CS3000",
-    "lessons": [
-      {
-        "_id": "L30000101",
-        "name": "Classes and Objects",
-        "description": "Defining classes and creating objects to model real systems.",
-        "module": "M300001"
-      },
-      {
-        "_id": "L30000102",
-        "name": "Encapsulation",
-        "description": "Access modifiers, getters/setters, and data hiding.",
-        "module": "M300001"
-      },
-      {
-        "_id": "L30000103",
-        "name": "Constructors and Methods",
-        "description": "Initialization patterns and method design.",
-        "module": "M300001"
-      }
-    ]
-  },
-  {
-    "_id": "M300002",
-    "name": "Inheritance and Polymorphism",
-    "description": "Using inheritance safely and leveraging polymorphism.",
-    "course": "CS3000",
-    "lessons": [
-      {
-        "_id": "L30000201",
-        "name": "Inheritance Basics",
-        "description": "Extending classes and understanding is-a relationships.",
-        "module": "M300002"
-      },
-      {
-        "_id": "L30000202",
-        "name": "Interfaces and Abstract Classes",
-        "description": "Designing flexible contracts and shared behavior.",
-        "module": "M300002"
-      },
-      {
-        "_id": "L30000203",
-        "name": "Polymorphism",
-        "description": "Dynamic dispatch and writing code against abstractions.",
-        "module": "M300002"
-      }
-    ]
-  },
-  {
-    "_id": "M300003",
-    "name": "Design and Refactoring",
-    "description": "Principles for clean OOP design and improving existing code.",
-    "course": "CS3000",
-    "lessons": [
-      {
-        "_id": "L30000301",
-        "name": "Design Principles",
-        "description": "Cohesion, coupling, and designing for change.",
-        "module": "M300003"
-      },
-      {
-        "_id": "L30000302",
-        "name": "Common Design Patterns",
-        "description": "Intro to patterns like Factory, Strategy, and Observer.",
-        "module": "M300003"
-      },
-      {
-        "_id": "L30000303",
-        "name": "Refactoring Techniques",
-        "description": "Improving structure without changing behavior.",
-        "module": "M300003"
+        "_id": "LRS1020303",
+        "name": "Re-entry Vehicle Heating",
+        "description": "Aerodynamic heating challenges specific to atmospheric re-entry.",
+        "module": "MRS10203"
       }
     ]
   },
 
   {
-    "_id": "M350001",
-    "name": "Data Structures Core",
-    "description": "Core data structures and how to use them effectively.",
-    "course": "CS3500",
+    "_id": "MRS10301",
+    "name": "Spacecraft Structural Design",
+    "description": "Fundamentals of designing spacecraft structures and materials selection.",
+    "course": "RS103",
     "lessons": [
       {
-        "_id": "L35000101",
-        "name": "Stacks and Queues",
-        "description": "LIFO and FIFO structures and typical use cases.",
-        "module": "M350001"
+        "_id": "LRS1030101",
+        "name": "Structural Load Analysis",
+        "description": "Types of loads spacecraft experience during launch and on-orbit.",
+        "module": "MRS10301"
       },
       {
-        "_id": "L35000102",
-        "name": "Trees and Traversals",
-        "description": "Tree structures and DFS/BFS traversal ideas.",
-        "module": "M350001"
+        "_id": "LRS1030102",
+        "name": "Materials for Space Applications",
+        "description": "Selection criteria and properties of materials used in spacecraft structures.",
+        "module": "MRS10301"
       },
       {
-        "_id": "L35000103",
-        "name": "Hash Tables",
-        "description": "Hashing, collisions, and why hash tables are fast.",
-        "module": "M350001"
+        "_id": "LRS1030103",
+        "name": "Structural Testing and Verification",
+        "description": "Methods for verifying structural integrity before launch.",
+        "module": "MRS10301"
       }
     ]
   },
   {
-    "_id": "M350002",
-    "name": "Algorithm Design",
-    "description": "Classic strategies for building correct and efficient algorithms.",
-    "course": "CS3500",
+    "_id": "MRS10302",
+    "name": "Orbital Mechanics",
+    "description": "Understanding orbital dynamics and mission planning.",
+    "course": "RS103",
     "lessons": [
       {
-        "_id": "L35000201",
-        "name": "Big-O Analysis",
-        "description": "Measuring runtime and comparing approaches.",
-        "module": "M350002"
+        "_id": "LRS1030201",
+        "name": "Kepler's Laws and Orbital Parameters",
+        "description": "Fundamental laws governing orbital motion and how to characterize orbits.",
+        "module": "MRS10302"
       },
       {
-        "_id": "L35000202",
-        "name": "Divide and Conquer",
-        "description": "Breaking problems into smaller parts, like merge sort.",
-        "module": "M350002"
+        "_id": "LRS1030202",
+        "name": "Orbital Maneuvers and Delta-V",
+        "description": "Hohmann transfers, plane changes, and fuel budgeting for missions.",
+        "module": "MRS10302"
       },
       {
-        "_id": "L35000203",
-        "name": "Greedy Algorithms",
-        "description": "Local choices that lead to good global solutions.",
-        "module": "M350002"
+        "_id": "LRS1030203",
+        "name": "Mission Planning and Launch Windows",
+        "description": "Timing launch opportunities and designing mission trajectories.",
+        "module": "MRS10302"
       }
     ]
   },
   {
-    "_id": "M350003",
-    "name": "Graphs and Applications",
-    "description": "Graph representations and algorithms used in real systems.",
-    "course": "CS3500",
+    "_id": "MRS10303",
+    "name": "Spacecraft Systems Engineering",
+    "description": "Overview of spacecraft systems and subsystems engineering.",
+    "course": "RS103",
     "lessons": [
       {
-        "_id": "L35000301",
-        "name": "Graph Representations",
-        "description": "Adjacency lists vs matrices and tradeoffs.",
-        "module": "M350003"
+        "_id": "LRS1030301",
+        "name": "Power Systems",
+        "description": "Solar arrays, batteries, and power distribution on spacecraft.",
+        "module": "MRS10303"
       },
       {
-        "_id": "L35000302",
-        "name": "Shortest Paths",
-        "description": "BFS, Dijkstra, and when each applies.",
-        "module": "M350003"
+        "_id": "LRS1030302",
+        "name": "Thermal Control",
+        "description": "Passive and active techniques for managing spacecraft temperature.",
+        "module": "MRS10303"
       },
       {
-        "_id": "L35000303",
-        "name": "Minimum Spanning Trees",
-        "description": "Kruskal/Prim and why MSTs matter.",
-        "module": "M350003"
-      }
-    ]
-  },
-
-  {
-    "_id": "M453001",
-    "name": "Software Process",
-    "description": "How real teams build software: planning, iteration, and delivery.",
-    "course": "CS4530",
-    "lessons": [
-      {
-        "_id": "L45300101",
-        "name": "Agile and Scrum",
-        "description": "Sprints, standups, user stories, and iterative development.",
-        "module": "M453001"
-      },
-      {
-        "_id": "L45300102",
-        "name": "Requirements and Specs",
-        "description": "Turning goals into clear, testable requirements.",
-        "module": "M453001"
-      },
-      {
-        "_id": "L45300103",
-        "name": "Version Control Workflows",
-        "description": "Branches, pull requests, and collaboration practices.",
-        "module": "M453001"
-      }
-    ]
-  },
-  {
-    "_id": "M453002",
-    "name": "Testing and Quality",
-    "description": "Building reliable software with testing and quality practices.",
-    "course": "CS4530",
-    "lessons": [
-      {
-        "_id": "L45300201",
-        "name": "Unit Testing",
-        "description": "Testing small pieces of code and writing good assertions.",
-        "module": "M453002"
-      },
-      {
-        "_id": "L45300202",
-        "name": "Integration Testing",
-        "description": "Testing interactions between modules and services.",
-        "module": "M453002"
-      },
-      {
-        "_id": "L45300203",
-        "name": "Code Reviews",
-        "description": "Reviewing code for correctness, readability, and maintainability.",
-        "module": "M453002"
-      }
-    ]
-  },
-  {
-    "_id": "M453003",
-    "name": "Architecture and Delivery",
-    "description": "Designing systems and shipping them safely.",
-    "course": "CS4530",
-    "lessons": [
-      {
-        "_id": "L45300301",
-        "name": "System Design Basics",
-        "description": "High-level architecture, components, and tradeoffs.",
-        "module": "M453003"
-      },
-      {
-        "_id": "L45300302",
-        "name": "APIs and Contracts",
-        "description": "Designing endpoints and maintaining clear interfaces.",
-        "module": "M453003"
-      },
-      {
-        "_id": "L45300303",
-        "name": "CI/CD Intro",
-        "description": "Automating tests and deployments with pipelines.",
-        "module": "M453003"
+        "_id": "LRS1030303",
+        "name": "Payload Integration",
+        "description": "Interfacing scientific and mission payloads with spacecraft bus systems.",
+        "module": "MRS10303"
       }
     ]
   },
 
   {
-    "_id": "M380001",
-    "name": "Automata and Languages",
-    "description": "Finite automata and the languages they recognize.",
-    "course": "CS3800",
+    "_id": "MRS10401",
+    "name": "Organic Compound Foundations",
+    "description": "Structure, bonding, and naming of organic molecules.",
+    "course": "RS104",
     "lessons": [
       {
-        "_id": "L38000101",
-        "name": "DFA and NFA",
-        "description": "Deterministic and nondeterministic finite automata.",
-        "module": "M380001"
+        "_id": "LRS1040101",
+        "name": "Carbon Bonding and Hybridization",
+        "description": "sp, sp2, and sp3 hybridization and their effect on molecular geometry.",
+        "module": "MRS10401"
       },
       {
-        "_id": "L38000102",
-        "name": "Regular Expressions",
-        "description": "Describing regular languages and converting between forms.",
-        "module": "M380001"
+        "_id": "LRS1040102",
+        "name": "Functional Groups",
+        "description": "Identifying and classifying key functional groups in organic chemistry.",
+        "module": "MRS10401"
       },
       {
-        "_id": "L38000103",
-        "name": "Pumping Lemma for Regular Languages",
-        "description": "Proving when a language is not regular.",
-        "module": "M380001"
+        "_id": "LRS1040103",
+        "name": "IUPAC Nomenclature",
+        "description": "Systematic naming rules for organic compounds.",
+        "module": "MRS10401"
       }
     ]
   },
   {
-    "_id": "M380002",
-    "name": "Context-Free Languages",
-    "description": "Grammars and pushdown automata for more complex languages.",
-    "course": "CS3800",
+    "_id": "MRS10402",
+    "name": "Reaction Mechanisms",
+    "description": "Understanding how and why organic reactions proceed.",
+    "course": "RS104",
     "lessons": [
       {
-        "_id": "L38000201",
-        "name": "CFG Basics",
-        "description": "Productions, derivations, and parse trees.",
-        "module": "M380002"
+        "_id": "LRS1040201",
+        "name": "Substitution Reactions",
+        "description": "SN1 and SN2 mechanisms, stereochemistry, and reaction conditions.",
+        "module": "MRS10402"
       },
       {
-        "_id": "L38000202",
-        "name": "Pushdown Automata",
-        "description": "How stacks allow recognition of context-free languages.",
-        "module": "M380002"
+        "_id": "LRS1040202",
+        "name": "Elimination Reactions",
+        "description": "E1 and E2 pathways and competition with substitution.",
+        "module": "MRS10402"
       },
       {
-        "_id": "L38000203",
-        "name": "Normal Forms",
-        "description": "Chomsky Normal Form and why transformations matter.",
-        "module": "M380002"
+        "_id": "LRS1040203",
+        "name": "Addition Reactions",
+        "description": "Electrophilic and nucleophilic addition to double bonds.",
+        "module": "MRS10402"
       }
     ]
   },
   {
-    "_id": "M380003",
-    "name": "Computability and Complexity",
-    "description": "What computers can do, what they cannot, and how hard problems are.",
-    "course": "CS3800",
+    "_id": "MRS10403",
+    "name": "Organic Synthesis and Spectroscopy",
+    "description": "Planning synthesis routes and characterizing organic compounds.",
+    "course": "RS104",
     "lessons": [
       {
-        "_id": "L38000301",
-        "name": "Turing Machines",
-        "description": "The core model for general computation.",
-        "module": "M380003"
+        "_id": "LRS1040301",
+        "name": "Retrosynthetic Analysis",
+        "description": "Working backward from a target molecule to plan a synthesis.",
+        "module": "MRS10403"
       },
       {
-        "_id": "L38000302",
-        "name": "Decidability",
-        "description": "Decidable vs undecidable problems and classic examples.",
-        "module": "M380003"
+        "_id": "LRS1040302",
+        "name": "Spectroscopic Methods",
+        "description": "Using IR, NMR, and mass spectrometry to determine structure.",
+        "module": "MRS10403"
       },
       {
-        "_id": "L38000303",
-        "name": "P vs NP Intro",
-        "description": "Basic complexity classes and what NP-complete means.",
-        "module": "M380003"
+        "_id": "LRS1040303",
+        "name": "Stereochemistry",
+        "description": "Chirality, enantiomers, and stereochemical outcomes of reactions.",
+        "module": "MRS10403"
+      }
+    ]
+  },
+
+  {
+    "_id": "MRS10501",
+    "name": "Coordination Chemistry",
+    "description": "Metal complexes, ligands, and coordination theory.",
+    "course": "RS105",
+    "lessons": [
+      {
+        "_id": "LRS1050101",
+        "name": "Coordination Compounds and Nomenclature",
+        "description": "Structure and naming of metal-ligand complexes.",
+        "module": "MRS10501"
+      },
+      {
+        "_id": "LRS1050102",
+        "name": "Crystal Field Theory",
+        "description": "How ligand fields split d-orbitals and influence properties.",
+        "module": "MRS10501"
+      },
+      {
+        "_id": "LRS1050103",
+        "name": "Chelation and Stability",
+        "description": "Chelate effect, stability constants, and complex formation equilibria.",
+        "module": "MRS10501"
+      }
+    ]
+  },
+  {
+    "_id": "MRS10502",
+    "name": "Bonding and Symmetry",
+    "description": "Molecular orbital theory and symmetry in inorganic chemistry.",
+    "course": "RS105",
+    "lessons": [
+      {
+        "_id": "LRS1050201",
+        "name": "Group Theory Basics",
+        "description": "Symmetry operations, point groups, and character tables.",
+        "module": "MRS10502"
+      },
+      {
+        "_id": "LRS1050202",
+        "name": "Molecular Orbital Theory",
+        "description": "Constructing MO diagrams for inorganic and organometallic compounds.",
+        "module": "MRS10502"
+      },
+      {
+        "_id": "LRS1050203",
+        "name": "Vibrational Spectroscopy",
+        "description": "Using IR and Raman spectroscopy to characterize inorganic compounds.",
+        "module": "MRS10502"
+      }
+    ]
+  },
+  {
+    "_id": "MRS10503",
+    "name": "Inorganic Synthesis and Applications",
+    "description": "Synthesis techniques and real-world applications of inorganic chemistry.",
+    "course": "RS105",
+    "lessons": [
+      {
+        "_id": "LRS1050301",
+        "name": "Synthesis Methods",
+        "description": "Common laboratory techniques for synthesizing inorganic compounds.",
+        "module": "MRS10503"
+      },
+      {
+        "_id": "LRS1050302",
+        "name": "Catalysis",
+        "description": "Homogeneous and heterogeneous catalysis using metal complexes.",
+        "module": "MRS10503"
+      },
+      {
+        "_id": "LRS1050303",
+        "name": "Bioinorganic Chemistry",
+        "description": "The role of metal ions in biological systems and enzyme function.",
+        "module": "MRS10503"
+      }
+    ]
+  },
+
+  {
+    "_id": "MRS10601",
+    "name": "Thermodynamics",
+    "description": "Energy, entropy, and equilibrium in chemical systems.",
+    "course": "RS106",
+    "lessons": [
+      {
+        "_id": "LRS1060101",
+        "name": "First and Second Laws",
+        "description": "Enthalpy, entropy, and the direction of spontaneous processes.",
+        "module": "MRS10601"
+      },
+      {
+        "_id": "LRS1060102",
+        "name": "Gibbs Free Energy",
+        "description": "Predicting reaction spontaneity and equilibrium using ΔG.",
+        "module": "MRS10601"
+      },
+      {
+        "_id": "LRS1060103",
+        "name": "Chemical Equilibrium",
+        "description": "Equilibrium constants, Le Chatelier's principle, and reaction quotients.",
+        "module": "MRS10601"
+      }
+    ]
+  },
+  {
+    "_id": "MRS10602",
+    "name": "Quantum Mechanics and Spectroscopy",
+    "description": "Quantum models of molecular structure and spectroscopic techniques.",
+    "course": "RS106",
+    "lessons": [
+      {
+        "_id": "LRS1060201",
+        "name": "Wave Functions and the Schrödinger Equation",
+        "description": "Quantum mechanical models for particles and atoms.",
+        "module": "MRS10602"
+      },
+      {
+        "_id": "LRS1060202",
+        "name": "Atomic Orbitals and Electron Configurations",
+        "description": "Quantum numbers, orbital shapes, and electronic structure.",
+        "module": "MRS10602"
+      },
+      {
+        "_id": "LRS1060203",
+        "name": "Spectroscopic Techniques",
+        "description": "IR, UV-Vis, and NMR methods for probing molecular structure.",
+        "module": "MRS10602"
+      }
+    ]
+  },
+  {
+    "_id": "MRS10603",
+    "name": "Kinetics",
+    "description": "Rates of chemical reactions and the factors that influence them.",
+    "course": "RS106",
+    "lessons": [
+      {
+        "_id": "LRS1060301",
+        "name": "Rate Laws and Reaction Orders",
+        "description": "Determining rate expressions and interpreting experimental data.",
+        "module": "MRS10603"
+      },
+      {
+        "_id": "LRS1060302",
+        "name": "Activation Energy and the Arrhenius Equation",
+        "description": "Temperature dependence of reaction rates and transition state theory.",
+        "module": "MRS10603"
+      },
+      {
+        "_id": "LRS1060303",
+        "name": "Reaction Mechanisms and Catalysis",
+        "description": "Elementary steps, rate-determining steps, and catalytic cycles.",
+        "module": "MRS10603"
+      }
+    ]
+  },
+
+  {
+    "_id": "MRS10701",
+    "name": "Elvish Languages",
+    "description": "Linguistic structure and historical context of Sindarin and Quenya.",
+    "course": "RS107",
+    "lessons": [
+      {
+        "_id": "LRS1070101",
+        "name": "Introduction to Quenya",
+        "description": "History, grammar, and phonology of the High-Elven tongue.",
+        "module": "MRS10701"
+      },
+      {
+        "_id": "LRS1070102",
+        "name": "Introduction to Sindarin",
+        "description": "Origins, structure, and common usage of the Grey-Elven language.",
+        "module": "MRS10701"
+      },
+      {
+        "_id": "LRS1070103",
+        "name": "Tengwar Script",
+        "description": "Reading and writing the Elvish script used across Middle-earth.",
+        "module": "MRS10701"
+      }
+    ]
+  },
+  {
+    "_id": "MRS10702",
+    "name": "Dwarvish and the Black Speech",
+    "description": "Khuzdul and the Black Speech: structure, origins, and cultural context.",
+    "course": "RS107",
+    "lessons": [
+      {
+        "_id": "LRS1070201",
+        "name": "Khuzdul Grammar and Vocabulary",
+        "description": "The secret language of the Dwarves: roots, morphology, and known inscriptions.",
+        "module": "MRS10702"
+      },
+      {
+        "_id": "LRS1070202",
+        "name": "Cirth Runes",
+        "description": "The runic script used primarily by Dwarves and its variants.",
+        "module": "MRS10702"
+      },
+      {
+        "_id": "LRS1070203",
+        "name": "The Black Speech of Mordor",
+        "description": "Sauron's constructed language: its purpose, structure, and use in inscriptions.",
+        "module": "MRS10702"
+      }
+    ]
+  },
+  {
+    "_id": "MRS10703",
+    "name": "Philology and Linguistic History",
+    "description": "The evolution and cultural significance of Middle-earth's languages.",
+    "course": "RS107",
+    "lessons": [
+      {
+        "_id": "LRS1070301",
+        "name": "Language Families of Middle-earth",
+        "description": "How the languages of Elves, Men, and Dwarves relate and diverged over time.",
+        "module": "MRS10703"
+      },
+      {
+        "_id": "LRS1070302",
+        "name": "Inscriptions and Texts",
+        "description": "Analyzing key inscriptions and written works found throughout Middle-earth.",
+        "module": "MRS10703"
+      },
+      {
+        "_id": "LRS1070303",
+        "name": "Tolkien as Philologist",
+        "description": "How Tolkien's academic background shaped the languages he invented.",
+        "module": "MRS10703"
+      }
+    ]
+  },
+
+  {
+    "_id": "MRS10801",
+    "name": "Foundations of Inter-species Diplomacy",
+    "description": "Core concepts of diplomacy and political relationships in Middle-earth.",
+    "course": "RS108",
+    "lessons": [
+      {
+        "_id": "LRS1080101",
+        "name": "Political Structures of Middle-earth",
+        "description": "Governance systems of the Elves, Men, Dwarves, and the role of the Wizards.",
+        "module": "MRS10801"
+      },
+      {
+        "_id": "LRS1080102",
+        "name": "Principles of Diplomacy",
+        "description": "Core frameworks for negotiation, alliance-building, and conflict resolution.",
+        "module": "MRS10801"
+      },
+      {
+        "_id": "LRS1080103",
+        "name": "Historical Alliances and Conflicts",
+        "description": "Survey of major inter-species agreements and wars across the Ages.",
+        "module": "MRS10801"
+      }
+    ]
+  },
+  {
+    "_id": "MRS10802",
+    "name": "Case Studies in Middle-earth Diplomacy",
+    "description": "Detailed analysis of pivotal diplomatic events across Middle-earth's history.",
+    "course": "RS108",
+    "lessons": [
+      {
+        "_id": "LRS1080201",
+        "name": "The Council of Elrond",
+        "description": "A diplomatic analysis of the council's composition, debate, and decision-making.",
+        "module": "MRS10802"
+      },
+      {
+        "_id": "LRS1080202",
+        "name": "The Last Alliance of Elves and Men",
+        "description": "Formation and execution of the most significant alliance in the Second Age.",
+        "module": "MRS10802"
+      },
+      {
+        "_id": "LRS1080203",
+        "name": "Dwarves and Elves: A Fractured Relationship",
+        "description": "Historical roots of tension between Dwarves and Elves and attempts at reconciliation.",
+        "module": "MRS10802"
+      }
+    ]
+  },
+  {
+    "_id": "MRS10803",
+    "name": "War, Peace, and Leadership",
+    "description": "The role of leadership and wisdom in navigating conflict and cooperation.",
+    "course": "RS108",
+    "lessons": [
+      {
+        "_id": "LRS1080301",
+        "name": "The War of the Ring as a Diplomatic Crisis",
+        "description": "How the free peoples coordinated (or failed to) in the face of existential threat.",
+        "module": "MRS10803"
+      },
+      {
+        "_id": "LRS1080302",
+        "name": "Leadership Archetypes in Middle-earth",
+        "description": "Comparing leadership styles of Gandalf, Aragorn, Théoden, and Denethor.",
+        "module": "MRS10803"
+      },
+      {
+        "_id": "LRS1080303",
+        "name": "Post-War Reconstruction and Peace",
+        "description": "Diplomacy after the War of the Ring and the challenge of rebuilding inter-species trust.",
+        "module": "MRS10803"
       }
     ]
   }

@@ -1,218 +1,249 @@
 [
   {
-    "_id": "A123401",
-    "title": "React Components Assignment",
-    "course": "CS1234",
-    "description": "Build and compose reusable React components using JSX. Focus on props, component structure, and basic styling.",
-    "points": 75,
-    "availableDate": "2026-02-06T00:00:00-05:00",
-    "dueDate": "2026-02-13T23:59:00-05:00",
-    "untilDate": "2026-02-20T23:59:00-05:00"
-  },
-  {
-    "_id": "A123402",
-    "title": "Hooks and State Exercise",
-    "course": "CS1234",
-    "description": "Practice using React hooks such as useState and useEffect to manage state and side effects in functional components.",
-    "points": 75,
-    "availableDate": "2026-02-14T00:00:00-05:00",
-    "dueDate": "2026-02-21T23:59:00-05:00",
-    "untilDate": "2026-02-28T23:59:00-05:00"
-  },
-  {
-    "_id": "A123403",
-    "title": "Full Stack React Project",
-    "course": "CS1234",
-    "description": "Develop a full-stack React application that integrates a frontend UI with a backend API and persistent data storage.",
-    "points": 100,
-    "availableDate": "2026-02-22T00:00:00-05:00",
-    "dueDate": "2026-03-01T23:59:00-05:00",
-    "untilDate": "2026-03-08T23:59:00-05:00"
-  },
-
-  {
-    "_id": "A250001",
-    "title": "Problem Solving Worksheet",
-    "course": "CS2500",
-    "description": "Solve a set of logic and algorithmic problems to strengthen structured problem-solving techniques.",
+    "_id": "ARS10101",
+    "title": "Propulsion Theory Quiz",
+    "course": "RS101",
+    "description": "Complete a written assessment covering fundamental propulsion theory, engine types, and the basics of fuel chemistry introduced in the first module.",
     "points": 50,
-    "availableDate": "2026-02-06T00:00:00-05:00",
-    "dueDate": "2026-02-13T23:59:00-05:00",
-    "untilDate": "2026-02-20T23:59:00-05:00"
+    "availableDate": "2023-01-10T00:00:00-05:00",
+    "dueDate": "2023-01-20T23:59:00-05:00",
+    "untilDate": "2023-01-27T23:59:00-05:00"
   },
   {
-    "_id": "A250002",
-    "title": "Functions and Recursion Lab",
-    "course": "CS2500",
-    "description": "Implement recursive functions and analyze their behavior, efficiency, and base cases.",
+    "_id": "ARS10102",
+    "title": "Combustion Analysis Lab",
+    "course": "RS101",
+    "description": "Conduct a lab exercise analyzing combustion processes for different rocket fuels, measuring efficiency and identifying instability factors.",
     "points": 75,
-    "availableDate": "2026-02-14T00:00:00-05:00",
-    "dueDate": "2026-02-21T23:59:00-05:00",
-    "untilDate": "2026-02-28T23:59:00-05:00"
+    "availableDate": "2023-01-21T00:00:00-05:00",
+    "dueDate": "2023-02-03T23:59:00-05:00",
+    "untilDate": "2023-02-10T23:59:00-05:00"
   },
   {
-    "_id": "A250003",
-    "title": "Data Structures Practice",
-    "course": "CS2500",
-    "description": "Practice working with fundamental data structures such as lists, trees, and maps through guided exercises.",
-    "points": 75,
-    "availableDate": "2026-02-22T00:00:00-05:00",
-    "dueDate": "2026-03-01T23:59:00-05:00",
-    "untilDate": "2026-03-08T23:59:00-05:00"
+    "_id": "ARS10103",
+    "title": "Nozzle Design Project",
+    "course": "RS101",
+    "description": "Design and optimize a rocket nozzle for a given set of performance requirements, documenting your design decisions and trade-offs.",
+    "points": 100,
+    "availableDate": "2023-02-04T00:00:00-05:00",
+    "dueDate": "2023-02-17T23:59:00-05:00",
+    "untilDate": "2023-02-24T23:59:00-05:00"
   },
 
   {
-    "_id": "A180001",
-    "title": "Logic and Proofs Homework",
-    "course": "CS1800",
-    "description": "Complete exercises involving propositional logic, predicates, and formal proofs.",
+    "_id": "ARS10201",
+    "title": "Fluid Dynamics Problem Set",
+    "course": "RS102",
+    "description": "Solve a series of problems on fluid dynamics fundamentals including pressure, velocity fields, and the continuity equation as applied to aerodynamic flows.",
     "points": 50,
-    "availableDate": "2026-02-06T00:00:00-05:00",
-    "dueDate": "2026-02-13T23:59:00-05:00",
-    "untilDate": "2026-02-20T23:59:00-05:00"
+    "availableDate": "2023-01-10T00:00:00-05:00",
+    "dueDate": "2023-01-20T23:59:00-05:00",
+    "untilDate": "2023-01-27T23:59:00-05:00"
   },
   {
-    "_id": "A180002",
-    "title": "Sets and Relations Assignment",
-    "course": "CS1800",
-    "description": "Work with sets, relations, and functions, including proofs of properties such as transitivity and equivalence.",
+    "_id": "ARS10202",
+    "title": "Subsonic vs Supersonic Flow Analysis",
+    "course": "RS102",
+    "description": "Analyze and compare airflow behavior in subsonic and supersonic regimes, including shock wave formation and its impact on lift and drag.",
     "points": 75,
-    "availableDate": "2026-02-14T00:00:00-05:00",
-    "dueDate": "2026-02-21T23:59:00-05:00",
-    "untilDate": "2026-02-28T23:59:00-05:00"
+    "availableDate": "2023-01-21T00:00:00-05:00",
+    "dueDate": "2023-02-03T23:59:00-05:00",
+    "untilDate": "2023-02-10T23:59:00-05:00"
   },
   {
-    "_id": "A180003",
-    "title": "Graph Theory Problems",
-    "course": "CS1800",
-    "description": "Solve graph theory problems involving paths, cycles, connectivity, and graph properties.",
+    "_id": "ARS10203",
+    "title": "Aerodynamic Heating Case Study",
+    "course": "RS102",
+    "description": "Evaluate thermal protection system requirements for a re-entry vehicle given aerodynamic heating data, and propose a viable material solution.",
     "points": 75,
-    "availableDate": "2026-02-22T00:00:00-05:00",
-    "dueDate": "2026-03-01T23:59:00-05:00",
-    "untilDate": "2026-03-08T23:59:00-05:00"
+    "availableDate": "2023-02-04T00:00:00-05:00",
+    "dueDate": "2023-02-17T23:59:00-05:00",
+    "untilDate": "2023-02-24T23:59:00-05:00"
   },
 
   {
-    "_id": "A300001",
-    "title": "OOP Fundamentals Lab",
-    "course": "CS3000",
-    "description": "Practice object-oriented programming concepts including classes, objects, encapsulation, and methods.",
-    "points": 75,
-    "availableDate": "2026-02-06T00:00:00-05:00",
-    "dueDate": "2026-02-13T23:59:00-05:00",
-    "untilDate": "2026-02-20T23:59:00-05:00"
-  },
-  {
-    "_id": "A300002",
-    "title": "Inheritance and Polymorphism Exercise",
-    "course": "CS3000",
-    "description": "Implement inheritance hierarchies and demonstrate polymorphic behavior in object-oriented programs.",
-    "points": 75,
-    "availableDate": "2026-02-14T00:00:00-05:00",
-    "dueDate": "2026-02-21T23:59:00-05:00",
-    "untilDate": "2026-02-28T23:59:00-05:00"
-  },
-  {
-    "_id": "A300003",
-    "title": "Design Patterns Project",
-    "course": "CS3000",
-    "description": "Apply common software design patterns to improve code structure, flexibility, and maintainability.",
-    "points": 100,
-    "availableDate": "2026-02-22T00:00:00-05:00",
-    "dueDate": "2026-03-01T23:59:00-05:00",
-    "untilDate": "2026-03-08T23:59:00-05:00"
-  },
-
-  {
-    "_id": "A350001",
-    "title": "Data Structures Implementation",
-    "course": "CS3500",
-    "description": "Implement core data structures from scratch and analyze their time and space complexity.",
-    "points": 100,
-    "availableDate": "2026-02-06T00:00:00-05:00",
-    "dueDate": "2026-02-13T23:59:00-05:00",
-    "untilDate": "2026-02-20T23:59:00-05:00"
-  },
-  {
-    "_id": "A350002",
-    "title": "Algorithm Analysis Homework",
-    "course": "CS3500",
-    "description": "Analyze algorithm performance using asymptotic notation and compare efficiency across approaches.",
-    "points": 75,
-    "availableDate": "2026-02-14T00:00:00-05:00",
-    "dueDate": "2026-02-21T23:59:00-05:00",
-    "untilDate": "2026-02-28T23:59:00-05:00"
-  },
-  {
-    "_id": "A350003",
-    "title": "Graph Algorithms Assignment",
-    "course": "CS3500",
-    "description": "Implement and analyze graph algorithms such as BFS, DFS, and shortest path algorithms.",
-    "points": 100,
-    "availableDate": "2026-02-22T00:00:00-05:00",
-    "dueDate": "2026-03-01T23:59:00-05:00",
-    "untilDate": "2026-03-08T23:59:00-05:00"
-  },
-
-  {
-    "_id": "A453001",
-    "title": "Agile Process Reflection",
-    "course": "CS4530",
-    "description": "Write a reflection on agile development practices and their impact on team collaboration and productivity.",
+    "_id": "ARS10301",
+    "title": "Spacecraft Structural Design Homework",
+    "course": "RS103",
+    "description": "Complete problems on spacecraft structural loads, materials selection, and design requirements for launch and on-orbit environments.",
     "points": 50,
-    "availableDate": "2026-02-06T00:00:00-05:00",
-    "dueDate": "2026-02-13T23:59:00-05:00",
-    "untilDate": "2026-02-20T23:59:00-05:00"
+    "availableDate": "2023-01-10T00:00:00-05:00",
+    "dueDate": "2023-01-20T23:59:00-05:00",
+    "untilDate": "2023-01-27T23:59:00-05:00"
   },
   {
-    "_id": "A453002",
-    "title": "Testing and Quality Lab",
-    "course": "CS4530",
-    "description": "Practice writing unit tests and evaluating software quality using automated testing frameworks.",
+    "_id": "ARS10302",
+    "title": "Orbital Mechanics Mission Plan",
+    "course": "RS103",
+    "description": "Plan an orbital mission by calculating transfer orbits, delta-v requirements, and mission timeline using orbital mechanics principles.",
     "points": 75,
-    "availableDate": "2026-02-14T00:00:00-05:00",
-    "dueDate": "2026-02-21T23:59:00-05:00",
-    "untilDate": "2026-02-28T23:59:00-05:00"
+    "availableDate": "2023-01-21T00:00:00-05:00",
+    "dueDate": "2023-02-03T23:59:00-05:00",
+    "untilDate": "2023-02-10T23:59:00-05:00"
   },
   {
-    "_id": "A453003",
-    "title": "System Design Project",
-    "course": "CS4530",
-    "description": "Design a scalable software system, focusing on architecture, trade-offs, and system components.",
+    "_id": "ARS10303",
+    "title": "Spacecraft Systems Integration Project",
+    "course": "RS103",
+    "description": "Develop a systems engineering document for a small spacecraft, integrating subsystems including power, thermal control, propulsion, and payload.",
     "points": 100,
-    "availableDate": "2026-02-22T00:00:00-05:00",
-    "dueDate": "2026-03-01T23:59:00-05:00",
-    "untilDate": "2026-03-08T23:59:00-05:00"
+    "availableDate": "2023-02-04T00:00:00-05:00",
+    "dueDate": "2023-02-17T23:59:00-05:00",
+    "untilDate": "2023-02-24T23:59:00-05:00"
   },
 
   {
-    "_id": "A380001",
-    "title": "Automata and Regular Languages Homework",
-    "course": "CS3800",
-    "description": "Solve problems involving finite automata, regular expressions, and language recognition.",
+    "_id": "ARS10401",
+    "title": "Functional Groups Identification Lab",
+    "course": "RS104",
+    "description": "Identify and classify functional groups in a set of organic compounds using spectroscopic data and apply IUPAC naming conventions.",
     "points": 50,
-    "availableDate": "2026-02-06T00:00:00-05:00",
-    "dueDate": "2026-02-13T23:59:00-05:00",
-    "untilDate": "2026-02-20T23:59:00-05:00"
+    "availableDate": "2023-01-10T00:00:00-05:00",
+    "dueDate": "2023-01-20T23:59:00-05:00",
+    "untilDate": "2023-01-27T23:59:00-05:00"
   },
   {
-    "_id": "A380002",
-    "title": "Context-Free Grammar Problems",
-    "course": "CS3800",
-    "description": "Analyze and construct context-free grammars and parse trees for formal languages.",
+    "_id": "ARS10402",
+    "title": "Reaction Mechanisms Worksheet",
+    "course": "RS104",
+    "description": "Draw and explain the step-by-step mechanisms for a series of organic reactions including substitution, elimination, and addition reactions.",
     "points": 75,
-    "availableDate": "2026-02-14T00:00:00-05:00",
-    "dueDate": "2026-02-21T23:59:00-05:00",
-    "untilDate": "2026-02-28T23:59:00-05:00"
+    "availableDate": "2023-01-21T00:00:00-05:00",
+    "dueDate": "2023-02-03T23:59:00-05:00",
+    "untilDate": "2023-02-10T23:59:00-05:00"
   },
   {
-    "_id": "A380003",
-    "title": "Computability and Complexity Assignment",
-    "course": "CS3800",
-    "description": "Explore computability limits and complexity classes through formal proofs and problem-solving.",
+    "_id": "ARS10403",
+    "title": "Organic Synthesis Design Project",
+    "course": "RS104",
+    "description": "Design a multi-step synthesis pathway for a target organic molecule, justifying reagent and condition choices at each step.",
+    "points": 100,
+    "availableDate": "2023-02-04T00:00:00-05:00",
+    "dueDate": "2023-02-17T23:59:00-05:00",
+    "untilDate": "2023-02-24T23:59:00-05:00"
+  },
+
+  {
+    "_id": "ARS10501",
+    "title": "Coordination Chemistry Problem Set",
+    "course": "RS105",
+    "description": "Solve problems on coordination compounds, including naming metal complexes, determining oxidation states, and applying crystal field theory.",
+    "points": 50,
+    "availableDate": "2023-01-10T00:00:00-05:00",
+    "dueDate": "2023-01-20T23:59:00-05:00",
+    "untilDate": "2023-01-27T23:59:00-05:00"
+  },
+  {
+    "_id": "ARS10502",
+    "title": "Bonding and Symmetry Assignment",
+    "course": "RS105",
+    "description": "Analyze the bonding and symmetry of inorganic molecules using group theory and molecular orbital diagrams.",
     "points": 75,
-    "availableDate": "2026-02-22T00:00:00-05:00",
-    "dueDate": "2026-03-01T23:59:00-05:00",
-    "untilDate": "2026-03-08T23:59:00-05:00"
+    "availableDate": "2023-01-21T00:00:00-05:00",
+    "dueDate": "2023-02-03T23:59:00-05:00",
+    "untilDate": "2023-02-10T23:59:00-05:00"
+  },
+  {
+    "_id": "ARS10503",
+    "title": "Inorganic Synthesis Lab Report",
+    "course": "RS105",
+    "description": "Synthesize an inorganic compound in the lab, characterize it using analytical techniques, and write a full lab report documenting your findings.",
+    "points": 100,
+    "availableDate": "2023-02-04T00:00:00-05:00",
+    "dueDate": "2023-02-17T23:59:00-05:00",
+    "untilDate": "2023-02-24T23:59:00-05:00"
+  },
+
+  {
+    "_id": "ARS10601",
+    "title": "Thermodynamics Problem Set",
+    "course": "RS106",
+    "description": "Solve thermodynamics problems involving enthalpy, entropy, Gibbs free energy, and equilibrium constants for chemical reactions.",
+    "points": 50,
+    "availableDate": "2023-01-10T00:00:00-05:00",
+    "dueDate": "2023-01-20T23:59:00-05:00",
+    "untilDate": "2023-01-27T23:59:00-05:00"
+  },
+  {
+    "_id": "ARS10602",
+    "title": "Quantum Mechanics and Spectroscopy Lab",
+    "course": "RS106",
+    "description": "Apply quantum mechanical models to interpret spectroscopic data, including IR, UV-Vis, and NMR spectra of selected molecules.",
+    "points": 75,
+    "availableDate": "2023-01-21T00:00:00-05:00",
+    "dueDate": "2023-02-03T23:59:00-05:00",
+    "untilDate": "2023-02-10T23:59:00-05:00"
+  },
+  {
+    "_id": "ARS10603",
+    "title": "Reaction Kinetics Experiment",
+    "course": "RS106",
+    "description": "Design and carry out a kinetics experiment to determine the rate law and activation energy of a chemical reaction, and present your analysis.",
+    "points": 100,
+    "availableDate": "2023-02-04T00:00:00-05:00",
+    "dueDate": "2023-02-17T23:59:00-05:00",
+    "untilDate": "2023-02-24T23:59:00-05:00"
+  },
+
+  {
+    "_id": "ARS10701",
+    "title": "Elvish Script Translation Exercise",
+    "course": "RS107",
+    "description": "Transcribe and translate a set of inscriptions written in Sindarin and Quenya, demonstrating understanding of grammatical structure and script conventions.",
+    "points": 50,
+    "availableDate": "2023-01-10T00:00:00-05:00",
+    "dueDate": "2023-01-20T23:59:00-05:00",
+    "untilDate": "2023-01-27T23:59:00-05:00"
+  },
+  {
+    "_id": "ARS10702",
+    "title": "Comparative Linguistics Analysis",
+    "course": "RS107",
+    "description": "Write a comparative analysis of Khuzdul and the Black Speech, examining their linguistic structures, origins, and cultural significance within Middle-earth lore.",
+    "points": 75,
+    "availableDate": "2023-01-21T00:00:00-05:00",
+    "dueDate": "2023-02-03T23:59:00-05:00",
+    "untilDate": "2023-02-10T23:59:00-05:00"
+  },
+  {
+    "_id": "ARS10703",
+    "title": "Philological Research Paper",
+    "course": "RS107",
+    "description": "Research and write a paper on the evolution of one Middle-earth language, tracing its historical development, key texts, and influence on the cultures that spoke it.",
+    "points": 100,
+    "availableDate": "2023-02-04T00:00:00-05:00",
+    "dueDate": "2023-02-17T23:59:00-05:00",
+    "untilDate": "2023-02-24T23:59:00-05:00"
+  },
+
+  {
+    "_id": "ARS10801",
+    "title": "Council of Elrond Case Study",
+    "course": "RS108",
+    "description": "Analyze the Council of Elrond as a diplomatic event, evaluating the negotiation strategies, competing interests, and decision-making processes of each race represented.",
+    "points": 50,
+    "availableDate": "2023-01-10T00:00:00-05:00",
+    "dueDate": "2023-01-20T23:59:00-05:00",
+    "untilDate": "2023-01-27T23:59:00-05:00"
+  },
+  {
+    "_id": "ARS10802",
+    "title": "Inter-species Alliance Report",
+    "course": "RS108",
+    "description": "Research a key alliance between two or more races in Middle-earth, examining the political motivations, terms of cooperation, and long-term outcomes of the partnership.",
+    "points": 75,
+    "availableDate": "2023-01-21T00:00:00-05:00",
+    "dueDate": "2023-02-03T23:59:00-05:00",
+    "untilDate": "2023-02-10T23:59:00-05:00"
+  },
+  {
+    "_id": "ARS10803",
+    "title": "War of the Ring Diplomacy Simulation",
+    "course": "RS108",
+    "description": "Participate in a structured simulation of War of the Ring diplomacy, representing one of the major factions and negotiating outcomes with other groups based on historical lore.",
+    "points": 100,
+    "availableDate": "2023-02-04T00:00:00-05:00",
+    "dueDate": "2023-02-17T23:59:00-05:00",
+    "untilDate": "2023-02-24T23:59:00-05:00"
   }
 ]
