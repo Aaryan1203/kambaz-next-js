@@ -15,6 +15,7 @@ import { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { RootState } from "../store";
 import { setCourses } from "../courses/reducer";
+import { setEnrollments } from "../courses/(enrollments)/reducer";
 import {
   addNewEnrollment,
   deleteEnrollment,
@@ -30,9 +31,6 @@ export default function Dashboard() {
   const dispatch = useDispatch();
   const { currentUser } = useSelector(
     (state: RootState) => state.accountReducer,
-  );
-  const { enrollments } = useSelector(
-    (state: RootState) => state.enrollmentsReducer,
   );
 
   const isFaculty = currentUser?.role === "FACULTY";
@@ -59,8 +57,18 @@ export default function Dashboard() {
     }
   };
 
+  const fetchEnrollments = async () => {
+    try {
+      const allEnrollments = await client.getAllEnrollments();
+      dispatch(setEnrollments(allEnrollments));
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
   useEffect(() => {
     fetchCourses();
+    fetchEnrollments();
   }, [currentUser]);
 
   const onAddNewCourse = async () => {

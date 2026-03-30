@@ -9,6 +9,16 @@ import { Button, FormControl } from "react-bootstrap";
 import { addAssignment, updateAssignment } from "../reducer";
 import { useRouter } from "next/navigation";
 import * as client from "../../../client";
+interface Assignment {
+  _id: any;
+  course: any;
+  title: string;
+  description: string;
+  points: number;
+  dueDate: string | null;
+  availableDate: string | null;
+  untilDate: string | null;
+}
 
 export default function AssignmentEditor() {
   const { aid, cid } = useParams();
@@ -22,16 +32,17 @@ export default function AssignmentEditor() {
   const currentAssignment = assignments.find(
     (assignment) => assignment._id === aid,
   );
-  const [assignment, setAssignment] = useState(
+
+  const [assignment, setAssignment] = useState<Assignment>(
     currentAssignment ?? {
       _id: aid,
       course: cid,
       title: "",
       description: "",
       points: 0,
-      dueDate: "",
-      availableDate: "",
-      untilDate: "",
+      dueDate: null,
+      availableDate: null,
+      untilDate: null,
     },
   );
 
@@ -127,7 +138,7 @@ export default function AssignmentEditor() {
                   type="date"
                   id="wd-due-date"
                   className="p-2 border mb-2"
-                  value={assignment.dueDate.slice(0, 10)}
+                  value={assignment.dueDate?.slice(0, 10) ?? ""}
                   onChange={(e) => {
                     const d = e.currentTarget.value;
                     setAssignment((prev) =>
@@ -143,7 +154,7 @@ export default function AssignmentEditor() {
                     <FormControl
                       type="date"
                       id="wd-available-from"
-                      value={assignment.availableDate.slice(0, 10)}
+                      value={assignment.availableDate?.slice(0, 10) ?? ""}
                       className="p-2 border mb-2"
                       onChange={(e) => {
                         const d = e.currentTarget.value;
@@ -162,7 +173,7 @@ export default function AssignmentEditor() {
                     <FormControl
                       type="date"
                       id="wd-available-until"
-                      value={assignment.untilDate.slice(0, 10)}
+                      value={assignment.untilDate?.slice(0, 10) ?? ""}
                       className="p-2 border mb-2"
                       onChange={(e) => {
                         const d = e.currentTarget.value;

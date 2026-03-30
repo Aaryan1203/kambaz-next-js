@@ -105,10 +105,10 @@ export default function Assignments() {
                     <div className="d-flex flex-column">
                       <strong>{assignment.title}</strong>
                       <span>
-                        <span className="text-danger">Multiple Modules</span>|{" "}
-                        <strong>Not available until</strong>
-                        {formatDate(assignment.availableDate)} |
-                        <strong>Due</strong> {formatDate(assignment.dueDate)}|
+                        <span className="text-danger">Multiple Modules </span>|{" "}
+                        <strong>Not available until </strong>
+                        {formatDate(assignment.availableDate)} |{" "}
+                        <strong>Due</strong> {formatDate(assignment.dueDate)} |{" "}
                         {assignment.points}pts
                       </span>
                     </div>

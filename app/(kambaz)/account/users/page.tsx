@@ -2,9 +2,9 @@
 import { useState, useEffect } from "react";
 import { useParams } from "next/navigation";
 import * as client from "../client";
-import PeopleTable from "../../courses/[cid]/people/table/page";
 import { FormControl } from "react-bootstrap";
 import { FaPlus } from "react-icons/fa6";
+import PeopleTable from "../../courses/[cid]/people/table/PeopleTable";
 
 export default function Users() {
   const [users, setUsers] = useState<any[]>([]);

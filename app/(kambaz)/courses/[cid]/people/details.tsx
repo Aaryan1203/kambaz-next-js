@@ -26,6 +26,7 @@ export default function PeopleDetails({
     if (!uid) return;
     const user = await client.findUserById(uid);
     setUser(user);
+    setName(`${user.firstName} ${user.lastName}`);
     setRole(user.role || "");
     setEmail(user.email || "");
   };
