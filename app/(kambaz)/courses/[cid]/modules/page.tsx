@@ -27,7 +27,7 @@ export default function Modules() {
   };
   useEffect(() => {
     fetchModules();
-  }, []);
+  }, [cid]);
 
   const onCreateModuleForCourse = async () => {
     if (!cid) return;

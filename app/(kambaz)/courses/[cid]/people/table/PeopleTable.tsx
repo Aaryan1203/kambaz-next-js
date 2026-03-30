@@ -2,12 +2,8 @@
 
 import { Table } from "react-bootstrap";
 import { FaUserCircle } from "react-icons/fa";
-import { useSelector } from "react-redux";
-import { RootState } from "../../../../store";
-import Link from "next/link";
 import { useState } from "react";
 import PeopleDetails from "../details";
-import { useParams } from "next/navigation";
 
 export default function PeopleTable({
   users = [],
@@ -18,7 +14,6 @@ export default function PeopleTable({
 }) {
   const [showDetails, setShowDetails] = useState(false);
   const [showUserId, setShowUserId] = useState<string | null>(null);
-  const { cid } = useParams();
 
   return (
     <div id="wd-people-table">
